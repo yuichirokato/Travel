@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		890758261A1AEFC500E94E93 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890758251A1AEFC500E94E93 /* ContainerViewController.swift */; };
+		890758281A1AF19A00E94E93 /* TRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890758271A1AF19A00E94E93 /* TRExtensions.swift */; };
+		892B1ADE1A1EE9FE00E5DEDF /* travely_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 892B1ADD1A1EE9FE00E5DEDF /* travely_icon@2x.png */; };
+		894BF6E51A6924AA00F2EE47 /* LocalMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BF6E41A6924AA00F2EE47 /* LocalMapViewController.swift */; };
+		894BF6E71A6925B300F2EE47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894BF6E61A6925B300F2EE47 /* MapKit.framework */; };
+		894BF6E91A69264500F2EE47 /* UserLocateMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BF6E81A69264500F2EE47 /* UserLocateMotion.swift */; };
+		894BF6EB1A6926ED00F2EE47 /* TRCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BF6EA1A6926ED00F2EE47 /* TRCoreDataManager.swift */; };
+		894BF6ED1A69281500F2EE47 /* UserPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BF6EC1A69281500F2EE47 /* UserPath.swift */; };
+		894BF6EF1A692B1B00F2EE47 /* TRDrawUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BF6EE1A692B1B00F2EE47 /* TRDrawUtils.swift */; };
+		894BF6F11A69316C00F2EE47 /* TRDisplaySaveTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BF6F01A69316C00F2EE47 /* TRDisplaySaveTravelViewController.swift */; };
+		894BF6F31A69376900F2EE47 /* TRLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BF6F21A69376900F2EE47 /* TRLog.swift */; };
+		896BE31D1A1C8AE800B7DEB9 /* CreateTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BE31C1A1C8AE800B7DEB9 /* CreateTravelViewController.swift */; };
+		896BE3511A1CA9A300B7DEB9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BE3501A1CA9A300B7DEB9 /* MenuViewController.swift */; };
+		8972D0111A1B5C3E0041F931 /* TRRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972D0101A1B5C3E0041F931 /* TRRouter.swift */; };
+		8972D0131A1B65760041F931 /* TRUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972D0121A1B65760041F931 /* TRUtils.swift */; };
+		89F08BF41A15912000DB4305 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F08BF31A15912000DB4305 /* AppDelegate.swift */; };
+		89F08BF71A15912000DB4305 /* Travely.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89F08BF51A15912000DB4305 /* Travely.xcdatamodeld */; };
+		89F08BF91A15912000DB4305 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F08BF81A15912000DB4305 /* ViewController.swift */; };
+		89F08BFC1A15912000DB4305 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89F08BFA1A15912000DB4305 /* Main.storyboard */; };
+		89F08BFE1A15912000DB4305 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89F08BFD1A15912000DB4305 /* Images.xcassets */; };
+		89F08C011A15912000DB4305 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89F08BFF1A15912000DB4305 /* LaunchScreen.xib */; };
+		89F08C0D1A15912000DB4305 /* TravelyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F08C0C1A15912000DB4305 /* TravelyTests.swift */; };
+		AE3D7BF2A494515ACE10AC54 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D09EF11CEB35D3BEBA78E47D /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89F08C071A15912000DB4305 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89F08BE61A15912000DB4305 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89F08BED1A15912000DB4305;
+			remoteInfo = Travely;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4FBFC404CDA9564BD624F3D5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		890758251A1AEFC500E94E93 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		890758271A1AF19A00E94E93 /* TRExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRExtensions.swift; sourceTree = "<group>"; };
+		892B1ADD1A1EE9FE00E5DEDF /* travely_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "travely_icon@2x.png"; sourceTree = "<group>"; };
+		894BF6E41A6924AA00F2EE47 /* LocalMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalMapViewController.swift; sourceTree = "<group>"; };
+		894BF6E61A6925B300F2EE47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		894BF6E81A69264500F2EE47 /* UserLocateMotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocateMotion.swift; sourceTree = "<group>"; };
+		894BF6EA1A6926ED00F2EE47 /* TRCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRCoreDataManager.swift; sourceTree = "<group>"; };
+		894BF6EC1A69281500F2EE47 /* UserPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPath.swift; sourceTree = "<group>"; };
+		894BF6EE1A692B1B00F2EE47 /* TRDrawUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRDrawUtils.swift; sourceTree = "<group>"; };
+		894BF6F01A69316C00F2EE47 /* TRDisplaySaveTravelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRDisplaySaveTravelViewController.swift; sourceTree = "<group>"; };
+		894BF6F21A69376900F2EE47 /* TRLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRLog.swift; sourceTree = "<group>"; };
+		896BE31C1A1C8AE800B7DEB9 /* CreateTravelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTravelViewController.swift; sourceTree = "<group>"; };
+		896BE3501A1CA9A300B7DEB9 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		8972D0101A1B5C3E0041F931 /* TRRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRRouter.swift; sourceTree = "<group>"; };
+		8972D0121A1B65760041F931 /* TRUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRUtils.swift; sourceTree = "<group>"; };
+		8989B6441A1591F600C34319 /* Travely-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Travely-Bridging-Header.h"; sourceTree = "<group>"; };
+		8989B6481A15933100C34319 /* libPods-MDCSwipeToChoose.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MDCSwipeToChoose.a"; path = "Pods/build/Debug-iphoneos/libPods-MDCSwipeToChoose.a"; sourceTree = "<group>"; };
+		89F08BEE1A15912000DB4305 /* Travely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travely.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89F08BF21A15912000DB4305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89F08BF31A15912000DB4305 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		89F08BF61A15912000DB4305 /* Travely.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Travely.xcdatamodel; sourceTree = "<group>"; };
+		89F08BF81A15912000DB4305 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89F08BFB1A15912000DB4305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		89F08BFD1A15912000DB4305 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		89F08C001A15912000DB4305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		89F08C061A15912000DB4305 /* TravelyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89F08C0B1A15912000DB4305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89F08C0C1A15912000DB4305 /* TravelyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelyTests.swift; sourceTree = "<group>"; };
+		D09EF11CEB35D3BEBA78E47D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E79862FF5B568790163E769B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89F08BEB1A15912000DB4305 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				894BF6E71A6925B300F2EE47 /* MapKit.framework in Frameworks */,
+				AE3D7BF2A494515ACE10AC54 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89F08C031A15912000DB4305 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0310E8EB8C7A523BEEC2C59B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				894BF6E61A6925B300F2EE47 /* MapKit.framework */,
+				8989B6481A15933100C34319 /* libPods-MDCSwipeToChoose.a */,
+				D09EF11CEB35D3BEBA78E47D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		370EB8C6F8B77F27E54B130E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E79862FF5B568790163E769B /* Pods.debug.xcconfig */,
+				4FBFC404CDA9564BD624F3D5 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		896347FD1A15D0F000683D4C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				892B1ADD1A1EE9FE00E5DEDF /* travely_icon@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		89F08BE51A15912000DB4305 = {
+			isa = PBXGroup;
+			children = (
+				896347FD1A15D0F000683D4C /* images */,
+				89F08BF01A15912000DB4305 /* Travely */,
+				89F08C091A15912000DB4305 /* TravelyTests */,
+				89F08BEF1A15912000DB4305 /* Products */,
+				370EB8C6F8B77F27E54B130E /* Pods */,
+				0310E8EB8C7A523BEEC2C59B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		89F08BEF1A15912000DB4305 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89F08BEE1A15912000DB4305 /* Travely.app */,
+				89F08C061A15912000DB4305 /* TravelyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89F08BF01A15912000DB4305 /* Travely */ = {
+			isa = PBXGroup;
+			children = (
+				89F08BF31A15912000DB4305 /* AppDelegate.swift */,
+				89F08BF81A15912000DB4305 /* ViewController.swift */,
+				896BE3501A1CA9A300B7DEB9 /* MenuViewController.swift */,
+				890758251A1AEFC500E94E93 /* ContainerViewController.swift */,
+				896BE31C1A1C8AE800B7DEB9 /* CreateTravelViewController.swift */,
+				894BF6E41A6924AA00F2EE47 /* LocalMapViewController.swift */,
+				894BF6F01A69316C00F2EE47 /* TRDisplaySaveTravelViewController.swift */,
+				894BF6E81A69264500F2EE47 /* UserLocateMotion.swift */,
+				894BF6EA1A6926ED00F2EE47 /* TRCoreDataManager.swift */,
+				894BF6EE1A692B1B00F2EE47 /* TRDrawUtils.swift */,
+				894BF6EC1A69281500F2EE47 /* UserPath.swift */,
+				890758271A1AF19A00E94E93 /* TRExtensions.swift */,
+				8972D0101A1B5C3E0041F931 /* TRRouter.swift */,
+				8972D0121A1B65760041F931 /* TRUtils.swift */,
+				894BF6F21A69376900F2EE47 /* TRLog.swift */,
+				89F08BFA1A15912000DB4305 /* Main.storyboard */,
+				89F08BFD1A15912000DB4305 /* Images.xcassets */,
+				89F08BFF1A15912000DB4305 /* LaunchScreen.xib */,
+				89F08BF51A15912000DB4305 /* Travely.xcdatamodeld */,
+				89F08BF11A15912000DB4305 /* Supporting Files */,
+				8989B6441A1591F600C34319 /* Travely-Bridging-Header.h */,
+			);
+			path = Travely;
+			sourceTree = "<group>";
+		};
+		89F08BF11A15912000DB4305 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89F08BF21A15912000DB4305 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89F08C091A15912000DB4305 /* TravelyTests */ = {
+			isa = PBXGroup;
+			children = (
+				89F08C0C1A15912000DB4305 /* TravelyTests.swift */,
+				89F08C0A1A15912000DB4305 /* Supporting Files */,
+			);
+			path = TravelyTests;
+			sourceTree = "<group>";
+		};
+		89F08C0A1A15912000DB4305 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89F08C0B1A15912000DB4305 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89F08BED1A15912000DB4305 /* Travely */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89F08C101A15912000DB4305 /* Build configuration list for PBXNativeTarget "Travely" */;
+			buildPhases = (
+				C9101ACDFF39B7C991C97072 /* Check Pods Manifest.lock */,
+				89F08BEA1A15912000DB4305 /* Sources */,
+				89F08BEB1A15912000DB4305 /* Frameworks */,
+				89F08BEC1A15912000DB4305 /* Resources */,
+				41FEC219830C304D7008ADA3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Travely;
+			productName = Travely;
+			productReference = 89F08BEE1A15912000DB4305 /* Travely.app */;
+			productType = "com.apple.product-type.application";
+		};
+		89F08C051A15912000DB4305 /* TravelyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89F08C131A15912000DB4305 /* Build configuration list for PBXNativeTarget "TravelyTests" */;
+			buildPhases = (
+				89F08C021A15912000DB4305 /* Sources */,
+				89F08C031A15912000DB4305 /* Frameworks */,
+				89F08C041A15912000DB4305 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89F08C081A15912000DB4305 /* PBXTargetDependency */,
+			);
+			name = TravelyTests;
+			productName = TravelyTests;
+			productReference = 89F08C061A15912000DB4305 /* TravelyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89F08BE61A15912000DB4305 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Yuichiro Takahashi";
+				TargetAttributes = {
+					89F08BED1A15912000DB4305 = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 3TCT9DKNME;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					89F08C051A15912000DB4305 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 89F08BED1A15912000DB4305;
+					};
+				};
+			};
+			buildConfigurationList = 89F08BE91A15912000DB4305 /* Build configuration list for PBXProject "Travely" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 89F08BE51A15912000DB4305;
+			productRefGroup = 89F08BEF1A15912000DB4305 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89F08BED1A15912000DB4305 /* Travely */,
+				89F08C051A15912000DB4305 /* TravelyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89F08BEC1A15912000DB4305 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				892B1ADE1A1EE9FE00E5DEDF /* travely_icon@2x.png in Resources */,
+				89F08BFC1A15912000DB4305 /* Main.storyboard in Resources */,
+				89F08C011A15912000DB4305 /* LaunchScreen.xib in Resources */,
+				89F08BFE1A15912000DB4305 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89F08C041A15912000DB4305 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41FEC219830C304D7008ADA3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9101ACDFF39B7C991C97072 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89F08BEA1A15912000DB4305 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89F08BF91A15912000DB4305 /* ViewController.swift in Sources */,
+				894BF6F11A69316C00F2EE47 /* TRDisplaySaveTravelViewController.swift in Sources */,
+				890758281A1AF19A00E94E93 /* TRExtensions.swift in Sources */,
+				89F08BF41A15912000DB4305 /* AppDelegate.swift in Sources */,
+				894BF6E51A6924AA00F2EE47 /* LocalMapViewController.swift in Sources */,
+				890758261A1AEFC500E94E93 /* ContainerViewController.swift in Sources */,
+				894BF6E91A69264500F2EE47 /* UserLocateMotion.swift in Sources */,
+				894BF6EB1A6926ED00F2EE47 /* TRCoreDataManager.swift in Sources */,
+				894BF6EF1A692B1B00F2EE47 /* TRDrawUtils.swift in Sources */,
+				894BF6ED1A69281500F2EE47 /* UserPath.swift in Sources */,
+				896BE3511A1CA9A300B7DEB9 /* MenuViewController.swift in Sources */,
+				89F08BF71A15912000DB4305 /* Travely.xcdatamodeld in Sources */,
+				8972D0111A1B5C3E0041F931 /* TRRouter.swift in Sources */,
+				8972D0131A1B65760041F931 /* TRUtils.swift in Sources */,
+				894BF6F31A69376900F2EE47 /* TRLog.swift in Sources */,
+				896BE31D1A1C8AE800B7DEB9 /* CreateTravelViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89F08C021A15912000DB4305 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89F08C0D1A15912000DB4305 /* TravelyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89F08C081A15912000DB4305 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89F08BED1A15912000DB4305 /* Travely */;
+			targetProxy = 89F08C071A15912000DB4305 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		89F08BFA1A15912000DB4305 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89F08BFB1A15912000DB4305 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		89F08BFF1A15912000DB4305 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89F08C001A15912000DB4305 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89F08C0E1A15912000DB4305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		89F08C0F1A15912000DB4305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89F08C111A15912000DB4305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E79862FF5B568790163E769B /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Travely/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Travely/Travely-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		89F08C121A15912000DB4305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FBFC404CDA9564BD624F3D5 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Travely/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Travely/Travely-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		89F08C141A15912000DB4305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TravelyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travely.app/Travely";
+			};
+			name = Debug;
+		};
+		89F08C151A15912000DB4305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TravelyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travely.app/Travely";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89F08BE91A15912000DB4305 /* Build configuration list for PBXProject "Travely" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89F08C0E1A15912000DB4305 /* Debug */,
+				89F08C0F1A15912000DB4305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89F08C101A15912000DB4305 /* Build configuration list for PBXNativeTarget "Travely" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89F08C111A15912000DB4305 /* Debug */,
+				89F08C121A15912000DB4305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89F08C131A15912000DB4305 /* Build configuration list for PBXNativeTarget "TravelyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89F08C141A15912000DB4305 /* Debug */,
+				89F08C151A15912000DB4305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		89F08BF51A15912000DB4305 /* Travely.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				89F08BF61A15912000DB4305 /* Travely.xcdatamodel */,
+			);
+			currentVersion = 89F08BF61A15912000DB4305 /* Travely.xcdatamodel */;
+			path = Travely.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 89F08BE61A15912000DB4305 /* Project object */;
+}
