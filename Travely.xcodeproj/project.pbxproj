@@ -9,6 +9,25 @@
 /* Begin PBXBuildFile section */
 		890758261A1AEFC500E94E93 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890758251A1AEFC500E94E93 /* ContainerViewController.swift */; };
 		890758281A1AF19A00E94E93 /* TRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890758271A1AF19A00E94E93 /* TRExtensions.swift */; };
+		891558021A73A1FC005E237A /* areaName01.json in Resources */ = {isa = PBXBuildFile; fileRef = 891557F61A73A1FC005E237A /* areaName01.json */; };
+		891558031A73A1FC005E237A /* areaName05.json in Resources */ = {isa = PBXBuildFile; fileRef = 891557F71A73A1FC005E237A /* areaName05.json */; };
+		891558041A73A1FC005E237A /* areaName10.json in Resources */ = {isa = PBXBuildFile; fileRef = 891557F81A73A1FC005E237A /* areaName10.json */; };
+		891558051A73A1FC005E237A /* areaName15.json in Resources */ = {isa = PBXBuildFile; fileRef = 891557F91A73A1FC005E237A /* areaName15.json */; };
+		891558061A73A1FC005E237A /* areaName20.json in Resources */ = {isa = PBXBuildFile; fileRef = 891557FA1A73A1FC005E237A /* areaName20.json */; };
+		891558071A73A1FC005E237A /* areaName25.json in Resources */ = {isa = PBXBuildFile; fileRef = 891557FB1A73A1FC005E237A /* areaName25.json */; };
+		891558081A73A1FC005E237A /* areaName30.json in Resources */ = {isa = PBXBuildFile; fileRef = 891557FC1A73A1FC005E237A /* areaName30.json */; };
+		891558091A73A1FC005E237A /* areaName35.json in Resources */ = {isa = PBXBuildFile; fileRef = 891557FD1A73A1FC005E237A /* areaName35.json */; };
+		8915580A1A73A1FC005E237A /* areaName40.json in Resources */ = {isa = PBXBuildFile; fileRef = 891557FE1A73A1FC005E237A /* areaName40.json */; };
+		8915580B1A73A1FC005E237A /* areaName45.json in Resources */ = {isa = PBXBuildFile; fileRef = 891557FF1A73A1FC005E237A /* areaName45.json */; };
+		8915580C1A73A1FC005E237A /* areaName50.json in Resources */ = {isa = PBXBuildFile; fileRef = 891558001A73A1FC005E237A /* areaName50.json */; };
+		8915580D1A73A1FC005E237A /* areaName55.json in Resources */ = {isa = PBXBuildFile; fileRef = 891558011A73A1FC005E237A /* areaName55.json */; };
+		891558111A73A229005E237A /* DefaultMapData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8915580E1A73A229005E237A /* DefaultMapData.xcdatamodeld */; };
+		891558141A73A7EF005E237A /* TRDefaultMapDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891558131A73A7EF005E237A /* TRDefaultMapDataManager.swift */; };
+		891558161A73A8B8005E237A /* Prefecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891558151A73A8B8005E237A /* Prefecture.swift */; };
+		891558181A73A8B9005E237A /* LargeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891558171A73A8B9005E237A /* LargeArea.swift */; };
+		8915581A1A73A8B9005E237A /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891558191A73A8B9005E237A /* Region.swift */; };
+		8915581C1A73A8B9005E237A /* SmallArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915581B1A73A8B9005E237A /* SmallArea.swift */; };
+		891558221A73A925005E237A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891558211A73A925005E237A /* SwiftyJSON.swift */; };
 		892B1ADE1A1EE9FE00E5DEDF /* travely_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 892B1ADD1A1EE9FE00E5DEDF /* travely_icon@2x.png */; };
 		894BF6E51A6924AA00F2EE47 /* LocalMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BF6E41A6924AA00F2EE47 /* LocalMapViewController.swift */; };
 		894BF6E71A6925B300F2EE47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894BF6E61A6925B300F2EE47 /* MapKit.framework */; };
@@ -46,6 +65,27 @@
 		4FBFC404CDA9564BD624F3D5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		890758251A1AEFC500E94E93 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		890758271A1AF19A00E94E93 /* TRExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRExtensions.swift; sourceTree = "<group>"; };
+		891557F61A73A1FC005E237A /* areaName01.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = areaName01.json; sourceTree = "<group>"; };
+		891557F71A73A1FC005E237A /* areaName05.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = areaName05.json; sourceTree = "<group>"; };
+		891557F81A73A1FC005E237A /* areaName10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = areaName10.json; sourceTree = "<group>"; };
+		891557F91A73A1FC005E237A /* areaName15.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = areaName15.json; sourceTree = "<group>"; };
+		891557FA1A73A1FC005E237A /* areaName20.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = areaName20.json; sourceTree = "<group>"; };
+		891557FB1A73A1FC005E237A /* areaName25.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = areaName25.json; sourceTree = "<group>"; };
+		891557FC1A73A1FC005E237A /* areaName30.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = areaName30.json; sourceTree = "<group>"; };
+		891557FD1A73A1FC005E237A /* areaName35.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = areaName35.json; sourceTree = "<group>"; };
+		891557FE1A73A1FC005E237A /* areaName40.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = areaName40.json; sourceTree = "<group>"; };
+		891557FF1A73A1FC005E237A /* areaName45.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = areaName45.json; sourceTree = "<group>"; };
+		891558001A73A1FC005E237A /* areaName50.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = areaName50.json; sourceTree = "<group>"; };
+		891558011A73A1FC005E237A /* areaName55.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = areaName55.json; sourceTree = "<group>"; };
+		8915580F1A73A229005E237A /* DefaultMapData 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DefaultMapData 2.xcdatamodel"; sourceTree = "<group>"; };
+		891558101A73A229005E237A /* DefaultMapData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DefaultMapData.xcdatamodel; sourceTree = "<group>"; };
+		891558121A73A23F005E237A /* DefaultMapData 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DefaultMapData 3.xcdatamodel"; sourceTree = "<group>"; };
+		891558131A73A7EF005E237A /* TRDefaultMapDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRDefaultMapDataManager.swift; sourceTree = "<group>"; };
+		891558151A73A8B8005E237A /* Prefecture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefecture.swift; sourceTree = "<group>"; };
+		891558171A73A8B9005E237A /* LargeArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeArea.swift; sourceTree = "<group>"; };
+		891558191A73A8B9005E237A /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		8915581B1A73A8B9005E237A /* SmallArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallArea.swift; sourceTree = "<group>"; };
+		891558211A73A925005E237A /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		892B1ADD1A1EE9FE00E5DEDF /* travely_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "travely_icon@2x.png"; sourceTree = "<group>"; };
 		894BF6E41A6924AA00F2EE47 /* LocalMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalMapViewController.swift; sourceTree = "<group>"; };
 		894BF6E61A6925B300F2EE47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -115,6 +155,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		891558241A73AC6D005E237A /* coredata */ = {
+			isa = PBXGroup;
+			children = (
+				894BF6EC1A69281500F2EE47 /* UserPath.swift */,
+				891558131A73A7EF005E237A /* TRDefaultMapDataManager.swift */,
+				894BF6EA1A6926ED00F2EE47 /* TRCoreDataManager.swift */,
+				8915581B1A73A8B9005E237A /* SmallArea.swift */,
+				891558191A73A8B9005E237A /* Region.swift */,
+				891558171A73A8B9005E237A /* LargeArea.swift */,
+				891558151A73A8B8005E237A /* Prefecture.swift */,
+			);
+			name = coredata;
+			sourceTree = "<group>";
+		};
 		896347FD1A15D0F000683D4C /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,8 +180,8 @@
 		89F08BE51A15912000DB4305 = {
 			isa = PBXGroup;
 			children = (
-				896347FD1A15D0F000683D4C /* images */,
 				89F08BF01A15912000DB4305 /* Travely */,
+				896347FD1A15D0F000683D4C /* images */,
 				89F08C091A15912000DB4305 /* TravelyTests */,
 				89F08BEF1A15912000DB4305 /* Products */,
 				370EB8C6F8B77F27E54B130E /* Pods */,
@@ -147,7 +201,9 @@
 		89F08BF01A15912000DB4305 /* Travely */ = {
 			isa = PBXGroup;
 			children = (
+				891558241A73AC6D005E237A /* coredata */,
 				89F08BF31A15912000DB4305 /* AppDelegate.swift */,
+				891558211A73A925005E237A /* SwiftyJSON.swift */,
 				89F08BF81A15912000DB4305 /* ViewController.swift */,
 				896BE3501A1CA9A300B7DEB9 /* MenuViewController.swift */,
 				890758251A1AEFC500E94E93 /* ContainerViewController.swift */,
@@ -155,9 +211,7 @@
 				894BF6E41A6924AA00F2EE47 /* LocalMapViewController.swift */,
 				894BF6F01A69316C00F2EE47 /* TRDisplaySaveTravelViewController.swift */,
 				894BF6E81A69264500F2EE47 /* UserLocateMotion.swift */,
-				894BF6EA1A6926ED00F2EE47 /* TRCoreDataManager.swift */,
 				894BF6EE1A692B1B00F2EE47 /* TRDrawUtils.swift */,
-				894BF6EC1A69281500F2EE47 /* UserPath.swift */,
 				890758271A1AF19A00E94E93 /* TRExtensions.swift */,
 				8972D0101A1B5C3E0041F931 /* TRRouter.swift */,
 				8972D0121A1B65760041F931 /* TRUtils.swift */,
@@ -166,6 +220,7 @@
 				89F08BFD1A15912000DB4305 /* Images.xcassets */,
 				89F08BFF1A15912000DB4305 /* LaunchScreen.xib */,
 				89F08BF51A15912000DB4305 /* Travely.xcdatamodeld */,
+				8915580E1A73A229005E237A /* DefaultMapData.xcdatamodeld */,
 				89F08BF11A15912000DB4305 /* Supporting Files */,
 				8989B6441A1591F600C34319 /* Travely-Bridging-Header.h */,
 			);
@@ -175,6 +230,18 @@
 		89F08BF11A15912000DB4305 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				891557F61A73A1FC005E237A /* areaName01.json */,
+				891557F71A73A1FC005E237A /* areaName05.json */,
+				891557F81A73A1FC005E237A /* areaName10.json */,
+				891557F91A73A1FC005E237A /* areaName15.json */,
+				891557FA1A73A1FC005E237A /* areaName20.json */,
+				891557FB1A73A1FC005E237A /* areaName25.json */,
+				891557FC1A73A1FC005E237A /* areaName30.json */,
+				891557FD1A73A1FC005E237A /* areaName35.json */,
+				891557FE1A73A1FC005E237A /* areaName40.json */,
+				891557FF1A73A1FC005E237A /* areaName45.json */,
+				891558001A73A1FC005E237A /* areaName50.json */,
+				891558011A73A1FC005E237A /* areaName55.json */,
 				89F08BF21A15912000DB4305 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -288,10 +355,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891558041A73A1FC005E237A /* areaName10.json in Resources */,
 				892B1ADE1A1EE9FE00E5DEDF /* travely_icon@2x.png in Resources */,
 				89F08BFC1A15912000DB4305 /* Main.storyboard in Resources */,
+				891558031A73A1FC005E237A /* areaName05.json in Resources */,
+				8915580B1A73A1FC005E237A /* areaName45.json in Resources */,
+				891558071A73A1FC005E237A /* areaName25.json in Resources */,
+				891558021A73A1FC005E237A /* areaName01.json in Resources */,
 				89F08C011A15912000DB4305 /* LaunchScreen.xib in Resources */,
 				89F08BFE1A15912000DB4305 /* Images.xcassets in Resources */,
+				8915580A1A73A1FC005E237A /* areaName40.json in Resources */,
+				891558061A73A1FC005E237A /* areaName20.json in Resources */,
+				8915580D1A73A1FC005E237A /* areaName55.json in Resources */,
+				8915580C1A73A1FC005E237A /* areaName50.json in Resources */,
+				891558091A73A1FC005E237A /* areaName35.json in Resources */,
+				891558051A73A1FC005E237A /* areaName15.json in Resources */,
+				891558081A73A1FC005E237A /* areaName30.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,18 +423,25 @@
 			files = (
 				89F08BF91A15912000DB4305 /* ViewController.swift in Sources */,
 				894BF6F11A69316C00F2EE47 /* TRDisplaySaveTravelViewController.swift in Sources */,
+				891558181A73A8B9005E237A /* LargeArea.swift in Sources */,
 				890758281A1AF19A00E94E93 /* TRExtensions.swift in Sources */,
 				89F08BF41A15912000DB4305 /* AppDelegate.swift in Sources */,
 				894BF6E51A6924AA00F2EE47 /* LocalMapViewController.swift in Sources */,
 				890758261A1AEFC500E94E93 /* ContainerViewController.swift in Sources */,
+				891558161A73A8B8005E237A /* Prefecture.swift in Sources */,
+				891558221A73A925005E237A /* SwiftyJSON.swift in Sources */,
 				894BF6E91A69264500F2EE47 /* UserLocateMotion.swift in Sources */,
 				894BF6EB1A6926ED00F2EE47 /* TRCoreDataManager.swift in Sources */,
 				894BF6EF1A692B1B00F2EE47 /* TRDrawUtils.swift in Sources */,
 				894BF6ED1A69281500F2EE47 /* UserPath.swift in Sources */,
+				891558141A73A7EF005E237A /* TRDefaultMapDataManager.swift in Sources */,
 				896BE3511A1CA9A300B7DEB9 /* MenuViewController.swift in Sources */,
 				89F08BF71A15912000DB4305 /* Travely.xcdatamodeld in Sources */,
+				891558111A73A229005E237A /* DefaultMapData.xcdatamodeld in Sources */,
 				8972D0111A1B5C3E0041F931 /* TRRouter.swift in Sources */,
 				8972D0131A1B65760041F931 /* TRUtils.swift in Sources */,
+				8915581C1A73A8B9005E237A /* SmallArea.swift in Sources */,
+				8915581A1A73A8B9005E237A /* Region.swift in Sources */,
 				894BF6F31A69376900F2EE47 /* TRLog.swift in Sources */,
 				896BE31D1A1C8AE800B7DEB9 /* CreateTravelViewController.swift in Sources */,
 			);
@@ -584,6 +670,18 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		8915580E1A73A229005E237A /* DefaultMapData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				891558121A73A23F005E237A /* DefaultMapData 3.xcdatamodel */,
+				8915580F1A73A229005E237A /* DefaultMapData 2.xcdatamodel */,
+				891558101A73A229005E237A /* DefaultMapData.xcdatamodel */,
+			);
+			currentVersion = 891558101A73A229005E237A /* DefaultMapData.xcdatamodel */;
+			path = DefaultMapData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		89F08BF51A15912000DB4305 /* Travely.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
