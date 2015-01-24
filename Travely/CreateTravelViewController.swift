@@ -10,6 +10,8 @@ import UIKit
 
 class CreateTravelViewController: UIViewController {
     
+    @IBOutlet weak var selectDestinationTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

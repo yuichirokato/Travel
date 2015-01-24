@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         let fileHandle = NSFileHandle(forReadingAtPath: path!)
         let data = fileHandle?.readDataToEndOfFile()
         let json = JSON(data: data!)
-        manager.addData(json["Results"]["Area"])
+        manager.insertMapData(json["Results"]["Area"])
         
         let array = (Array<Int>)(5...55)
         array.filter { $0 % 5 == 0 }.foreach { index in
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
             let fileHandle = NSFileHandle(forReadingAtPath: path!)
             let data = fileHandle?.readDataToEndOfFile()
             let json = JSON(data: data!)
-            self.manager.addData(json["Results"]["Area"])
+            self.manager.insertMapData(json["Results"]["Area"])
         }
     }
     

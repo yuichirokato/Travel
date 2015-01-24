@@ -24,7 +24,7 @@ class LocalMapViewController: UIViewController, CLLocationManagerDelegate, MKMap
     private var motionActivity: CMMotionActivity?
     private var defrredLocationUpdates = false
     private var lastAnnotation = ""
-    private let coreDataManager = TRCoreDataManager.sharedManager
+    private let travelDataManager = TRTravelDataManager.sharedManager
     
     private let kLocationDistance: CLLocationDistance = 100.0
     private let kTimeInterval: NSTimeInterval = 30.0
@@ -33,7 +33,7 @@ class LocalMapViewController: UIViewController, CLLocationManagerDelegate, MKMap
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        coreDataManager.deleteAllData(coreDataManager.kEntityName)
+        travelDataManager.deleteAllUserPath()
         
         let status = CLLocationManager.authorizationStatus()
         
@@ -69,7 +69,7 @@ class LocalMapViewController: UIViewController, CLLocationManagerDelegate, MKMap
         locate.foreach { lc in
             let userLocateMotion = UserLocateMotion(location: lc, activity: self.motionActivity)
             let colorHex = TRUtils.getColorHexWithActivity(userLocateMotion.activity)
-            self.coreDataManager.addData(userLocateMotion, activityColorHex: colorHex)
+            self.travelDataManager.insertUserPath(userLocateMotion, activityColorHex: colorHex)
             if self.locationItems.count > 1 {
                 if !self.locationItems.last!.isSameActivity(userLocateMotion) {
                     self.drawActivity()
