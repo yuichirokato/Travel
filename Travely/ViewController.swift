@@ -17,21 +17,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.router = TRRouter()
-        
+            
         if (!isLaunchedAfterFirst()) {
+            println("firstest!")
             setDefaultData()
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasLaunchedOnce")
             NSUserDefaults.standardUserDefaults().synchronize()
         }
         
-        manager.getAll("Region")?.foreach { region in
-            if region.cd! == 50 {
-                println("name = \(region.name!)")
-                for pref in region.prefecture! {
-                    println("prefecture = \(pref.name!)")
-                }
-            }
-        }
+        manager.getRegionsName().foreach { TRLog.log("getRegionName = \($0)") }
     }
     
     func isLaunchedAfterFirst() -> Bool {

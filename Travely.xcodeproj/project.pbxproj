@@ -183,6 +183,14 @@
 			name = utils;
 			sourceTree = "<group>";
 		};
+		894AAE4E1A75F20100937E62 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				891558211A73A925005E237A /* SwiftyJSON.swift */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
 		896347FD1A15D0F000683D4C /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,10 +223,10 @@
 		89F08BF01A15912000DB4305 /* Travely */ = {
 			isa = PBXGroup;
 			children = (
+				894AAE4E1A75F20100937E62 /* lib */,
 				8915582E1A73CDB6005E237A /* utils */,
 				891558241A73AC6D005E237A /* coredata */,
 				89F08BF31A15912000DB4305 /* AppDelegate.swift */,
-				891558211A73A925005E237A /* SwiftyJSON.swift */,
 				89F08BF81A15912000DB4305 /* ViewController.swift */,
 				896BE3501A1CA9A300B7DEB9 /* MenuViewController.swift */,
 				890758251A1AEFC500E94E93 /* ContainerViewController.swift */,

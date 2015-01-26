@@ -48,14 +48,11 @@ class TRTravelDataManager: NSObject {
         self.coreDataManager.saveContext()
     }
     
-    func deleteUserPathAtIndexPath(indexPath: NSIndexPath, sortKey: String?) {
-        let request = self.coreDataManager.createFetchRequest(kEntityNameUserPath, sortKey: sortKey, limit: 0)
-        let resultsController = self.coreDataManager.createFetchedResultsController(request)
-        
-        let userPath = resultsController.objectAtIndexPath(indexPath) as UserPath
-    }
-    
     func deleteAllUserPath() {
         self.coreDataManager.deleteAllData(kEntityNameUserPath)
+    }
+    
+    func saveContext() {
+        self.coreDataManager.saveContext()
     }
 }

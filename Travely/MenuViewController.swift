@@ -44,7 +44,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         
-        cell.foreach({ c in
+        cell.foreach { c in
             switch c.textLabel!.text {
             case .Some(let text) where text == "思い出を振り返る":
                 let viewController = TRUtils.getViewController("mainView")
@@ -65,7 +65,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             default:
                 println("うまく遷移できませんでした！")
             }
-        })
+        }
     }
 }
 

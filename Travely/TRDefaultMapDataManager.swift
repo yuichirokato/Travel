@@ -24,6 +24,7 @@ class TRDefaultMapDataManager: NSObject {
     private let kJsonKeyPrefecture = "Prefecture"
     private let kJsonKeyLargeArea = "LargeArea"
     private let kJsonKeySmallArea = "SmallArea"
+    private let kDefaultPlaceName = "noname"
     
     // MARK: - singleton pattern
     class var sharedManager: TRDefaultMapDataManager {
@@ -48,25 +49,70 @@ class TRDefaultMapDataManager: NSObject {
         return self.coreDataManager.fetch(entityName, sortKey: sortKey, limit: 0)
     }
     
+    func getRegions() -> [Region] {
+        return self.coreDataManager.fetch(kEntityNameRegion, sortKey: nil, limit: 0) as [Region]
+    }
+    
+    func gerRegionWithCD(cd: String) -> [Region] {
+        let results = self.coreDataManager.fetchWithConditions(kEntityNameRegion, sortKey: nil, conditions: "cd = %@", condisonValus: cd)
+        return results as [Region]
+    }
+    
+    func getPrefecturesWithRegion(region: Region) -> [Prefecture] {
+        if let prefectures = region.prefecture {
+            return prefectures.allObjects as [Prefecture]
+        }
+        abort()
+    }
+    
+    func getRegionsName() -> [String] {
+        return getRegions().map { region -> String in region.name.getOrElse(self.kDefaultPlaceName) }
+    }
+    
+    func getPrefecturesNameWithRegion(region: Region) -> [String] {
+        return getPrefecturesWithRegion(region).map { pref -> String in pref.name.getOrElse(self.kDefaultPlaceName) }
+    }
+    
+    func getPrefecturesNameWithRegionName(regionName: String) -> [String] {
+        let prefectures = self.coreDataManager.fetch(kEntityNamePrefecture, sortKey: nil, limit: 0) as [Prefecture]
+        return prefectures.filter { pref -> Bool in pref.region!.name! == regionName }.map { pref -> String in
+            pref.name.getOrElse(self.kDefaultPlaceName)
+        }
+    }
+    
+    func getLargeAreasNameWithPrefecture(prefecture: Prefecture) -> [String] {
+        let largeAreas = prefecture.largearea!.allObjects as [LargeArea]
+        return largeAreas.map { lArea -> String in lArea.name.getOrElse(self.kDefaultPlaceName) }
+    }
+    
+    func getSmallAreasNameWithLargeArea(lArea: LargeArea) -> [String] {
+        let smallArea = lArea.smallarea!.allObjects as [SmallArea]
+        return smallArea.map { sArea -> String in sArea.name.getOrElse(self.kDefaultPlaceName) }
+    }
+    
     func insertMapData(areaJson: JSON) {
-        let region = self.coreDataManager.entityForInsert(kEntityNameRegion) as Region
-        
-        region.cd = areaJson[kJsonKeyRegion][kJsonKeyCD].string.getOrElse("-1").toInt().getOrElse(-1)
-        region.name = areaJson[kJsonKeyRegion][kJsonKeyName].string ?? "def"
-        region.prefecture = parseJson2Prefecture(areaJson[kJsonKeyRegion][kJsonKeyPrefecture], region: region)
+        self.coreDataManager.aysncInsertBlock {
+            let region = self.coreDataManager.entityForInsert(self.kEntityNameRegion) as Region
+            region.cd = areaJson[self.kJsonKeyRegion][self.kJsonKeyCD].string.getOrElse("-1").toIntAsUnwrapOpt()
+            region.name = areaJson[self.kJsonKeyRegion][self.kJsonKeyName].string.getOrElse("def")
+            region.prefecture = self.parseJson2Prefecture(areaJson[self.kJsonKeyRegion][self.kJsonKeyPrefecture],
+                region: region)
+        }
+    }
+    
+    func saveContext() {
         self.coreDataManager.saveContext()
     }
     
     // MARK: - parse json to entity set
     private func parseJson2Prefecture(json: JSON, region: Region) -> NSSet? {
-        
         switch json.array {
         case .Some(let prefectures):
             return NSSet(array:
                 prefectures.map { pref -> Prefecture in
                     let p = self.coreDataManager.entityForInsert(self.kEntityNamePrefecture) as Prefecture
                     p.name = pref[self.kJsonKeyName].string.getOrElse("def")
-                    p.cd = pref[self.kJsonKeyCD].string.getOrElse("-1").toInt().getOrElse(-1)
+                    p.cd = pref[self.kJsonKeyCD].string.getOrElse("-1").toIntAsUnwrapOpt()
                     p.largearea = self.parseJson2LargeArea(pref[self.kJsonKeyLargeArea], prefecture: p)
                     p.region = region
                     return p
@@ -76,7 +122,7 @@ class TRDefaultMapDataManager: NSObject {
             return NSSet(object: json.dictionary.map { prefecture -> Prefecture in
                 let pref = self.coreDataManager.entityForInsert(self.kEntityNamePrefecture) as Prefecture
                 pref.name = prefecture[self.kJsonKeyName]?.string.getOrElse("def")
-                pref.cd = prefecture[self.kJsonKeyCD]?.string.getOrElse("-1").toInt().getOrElse(-1)
+                pref.cd = prefecture[self.kJsonKeyCD]?.string.getOrElse("-1").toIntAsUnwrapOpt()
                 pref.largearea = self.parseJson2LargeArea(prefecture[self.kJsonKeyLargeArea]!, prefecture: pref)
                 pref.region = region
                 return pref
