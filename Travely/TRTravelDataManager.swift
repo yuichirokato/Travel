@@ -40,12 +40,13 @@ class TRTravelDataManager: NSObject {
     }
     
     func insertUserPath(lm: UserLocateMotion, activityColorHex: UInt) {
-        let userPath = self.coreDataManager.entityForInsert(kEntityNameUserPath) as UserPath
-        userPath.longitude = lm.location.coordinate.longitude
-        userPath.latitude = lm.location.coordinate.latitude
-        userPath.timestamp = lm.location.timestamp
-        userPath.activityColorHex = activityColorHex
-        self.coreDataManager.saveContext()
+        self.coreDataManager.asyncInsertBlock {
+            let userPath = self.coreDataManager.entityForInsert(self.kEntityNameUserPath) as UserPath
+            userPath.longitude = lm.location.coordinate.longitude
+            userPath.latitude = lm.location.coordinate.latitude
+            userPath.timestamp = lm.location.timestamp
+            userPath.activityColorHex = activityColorHex
+        }
     }
     
     func deleteAllUserPath() {

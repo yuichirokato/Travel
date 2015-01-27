@@ -42,6 +42,10 @@ extension Array {
         
         return self
     }
+    
+    func flatmap<U>(transform: (T) -> [U]) -> [U] {
+        return map(transform).reduce([]) { $0 + $1 }
+    }
 }
 
 extension String {

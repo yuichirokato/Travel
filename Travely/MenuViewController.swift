@@ -51,6 +51,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.sidePanelController.centerPanel = UINavigationController(rootViewController: viewController)
             
             case .Some(let text) where text == "思い出を作る":
+                TRLog.log("create travel")
                 let viewController = TRUtils.getViewController("createTravelView")
                 self.sidePanelController.centerPanel = UINavigationController(rootViewController: viewController)
                 

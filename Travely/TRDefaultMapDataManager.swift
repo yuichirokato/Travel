@@ -25,6 +25,7 @@ class TRDefaultMapDataManager: NSObject {
     private let kJsonKeyLargeArea = "LargeArea"
     private let kJsonKeySmallArea = "SmallArea"
     private let kDefaultPlaceName = "noname"
+    private let kSortKeyCD = "cd"
     
     // MARK: - singleton pattern
     class var sharedManager: TRDefaultMapDataManager {
@@ -41,57 +42,42 @@ class TRDefaultMapDataManager: NSObject {
     }
     
     // MARK: - entity access method
-    func getAll(entityName: String) -> [Region]? {
-        return self.coreDataManager.fetch(entityName, sortKey: nil, limit: 0) as? [Region]
-    }
-    
-    func getAllWithSortKey(entityName: String, sortKey: String) -> [NSManagedObject] {
-        return self.coreDataManager.fetch(entityName, sortKey: sortKey, limit: 0)
-    }
-    
     func getRegions() -> [Region] {
-        return self.coreDataManager.fetch(kEntityNameRegion, sortKey: nil, limit: 0) as [Region]
-    }
-    
-    func gerRegionWithCD(cd: String) -> [Region] {
-        let results = self.coreDataManager.fetchWithConditions(kEntityNameRegion, sortKey: nil, conditions: "cd = %@", condisonValus: cd)
-        return results as [Region]
-    }
-    
-    func getPrefecturesWithRegion(region: Region) -> [Prefecture] {
-        if let prefectures = region.prefecture {
-            return prefectures.allObjects as [Prefecture]
-        }
-        abort()
+        return self.coreDataManager.fetchWithSortKey(kEntityNameRegion, sortKey: kSortKeyCD, limit: 0,
+            ascEnding: true) as [Region]
     }
     
     func getRegionsName() -> [String] {
         return getRegions().map { region -> String in region.name.getOrElse(self.kDefaultPlaceName) }
     }
     
-    func getPrefecturesNameWithRegion(region: Region) -> [String] {
-        return getPrefecturesWithRegion(region).map { pref -> String in pref.name.getOrElse(self.kDefaultPlaceName) }
-    }
-    
     func getPrefecturesNameWithRegionName(regionName: String) -> [String] {
-        let prefectures = self.coreDataManager.fetch(kEntityNamePrefecture, sortKey: nil, limit: 0) as [Prefecture]
+        let prefectures = self.coreDataManager.fetchWithSortKey(kEntityNamePrefecture, sortKey: kSortKeyCD, limit: 0, ascEnding: true) as [Prefecture]
+        
         return prefectures.filter { pref -> Bool in pref.region!.name! == regionName }.map { pref -> String in
             pref.name.getOrElse(self.kDefaultPlaceName)
         }
     }
     
-    func getLargeAreasNameWithPrefecture(prefecture: Prefecture) -> [String] {
-        let largeAreas = prefecture.largearea!.allObjects as [LargeArea]
-        return largeAreas.map { lArea -> String in lArea.name.getOrElse(self.kDefaultPlaceName) }
+    func getLargeAreaNameWithPrefectureName(prefectureName: String) -> [String] {
+        let largeAreas = self.coreDataManager.fetchWithSortKey(kEntityNameLargeArea, sortKey: kSortKeyCD, limit: 0, ascEnding: true) as [LargeArea]
+        
+        return largeAreas.filter { lArea -> Bool in lArea.prefecture!.name! == prefectureName }.map { lArea -> String in
+            lArea.name.getOrElse(self.kDefaultPlaceName)
+        }
     }
     
-    func getSmallAreasNameWithLargeArea(lArea: LargeArea) -> [String] {
-        let smallArea = lArea.smallarea!.allObjects as [SmallArea]
-        return smallArea.map { sArea -> String in sArea.name.getOrElse(self.kDefaultPlaceName) }
+    func getSmallAreaNameWithLargeAreaName(lAreaName: String) -> [String] {
+        let smallArea = self.coreDataManager.fetchWithSortKey(kEntityNameSmallArea, sortKey: kSortKeyCD, limit: 0,
+            ascEnding: true) as [SmallArea]
+        
+        return smallArea.filter { sArea -> Bool in sArea.largearea!.name! == lAreaName }.map { sArea -> String in
+            sArea.name.getOrElse(self.kDefaultPlaceName)
+        }
     }
     
     func insertMapData(areaJson: JSON) {
-        self.coreDataManager.aysncInsertBlock {
+        self.coreDataManager.asyncInsertBlock {
             let region = self.coreDataManager.entityForInsert(self.kEntityNameRegion) as Region
             region.cd = areaJson[self.kJsonKeyRegion][self.kJsonKeyCD].string.getOrElse("-1").toIntAsUnwrapOpt()
             region.name = areaJson[self.kJsonKeyRegion][self.kJsonKeyName].string.getOrElse("def")

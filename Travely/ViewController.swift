@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.router = TRRouter()
-            
+        
         if (!isLaunchedAfterFirst()) {
             println("firstest!")
             setDefaultData()

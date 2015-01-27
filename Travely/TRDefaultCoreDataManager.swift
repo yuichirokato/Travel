@@ -36,10 +36,17 @@ class TRDefaultCoreDataManager: NSObject {
         return self.childContext.executeFetchRequest(request, error: &error) as [NSManagedObject]
     }
     
+    func fetchWithSortKey(entityName: String, sortKey: String, limit: Int, ascEnding: Bool) -> [NSManagedObject] {
+        let request = self.createFetchRequest(entityName, sortKey: sortKey, ascEnding: ascEnding)
+        var error: NSError?
+        
+        return self.childContext.executeFetchRequest(request, error: &error) as [NSManagedObject]
+    }
+    
     func fetchWithConditions(entityName: String, sortKey: String?, conditions: String,
         condisonValus: String...) -> [NSManagedObject] {
             var error: NSError?
-            let request = self.createFetchRequest(entityName, sortKey: sortKey, limit: 0)
+            let request = self.createFetchRequest(entityName, sortKey: sortKey)
             let predicate = NSPredicate(format: conditions, condisonValus)
             request.predicate = predicate
             
@@ -47,7 +54,7 @@ class TRDefaultCoreDataManager: NSObject {
     }
     
     func deleteAllData(entityName: String) {
-        let deleteRequest = self.createFetchRequest(entityName, sortKey: nil, limit: 0)
+        let deleteRequest = self.createFetchRequest(entityName, sortKey: nil)
         var error: NSError?
         let datas = self.childContext.executeFetchRequest(deleteRequest, error: &error) as [NSManagedObject]
         
@@ -75,9 +82,9 @@ class TRDefaultCoreDataManager: NSObject {
         }
     }
     
-    func aysncInsertBlock(asyncInertBlock: () -> ()) {
+    func asyncInsertBlock(asyncInsertBlock: () -> ()) {
         self.childContext.performBlock {
-            asyncInertBlock()
+            asyncInsertBlock()
             self.saveContext()
         }
     }
@@ -124,14 +131,16 @@ class TRDefaultCoreDataManager: NSObject {
         return resultController
     }
     
-    private func createFetchRequest(entityName: String, sortKey: String?, limit: Int) -> NSFetchRequest {
+    private func createFetchRequest(entityName: String, sortKey: String?, limit: Int = 0, ascEnding: Bool = false) -> NSFetchRequest {
         let request = NSFetchRequest()
         let entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: self.childContext)
         
         request.entity = entity
         request.fetchLimit = limit
         
-        request.sortDescriptors = sortKey.map { [NSSortDescriptor(key: $0, ascending: false)] }
+        request.sortDescriptors = sortKey.map { key -> [NSSortDescriptor] in
+            [NSSortDescriptor(key: key, ascending: ascEnding)]
+        }
         
         return request
     }
