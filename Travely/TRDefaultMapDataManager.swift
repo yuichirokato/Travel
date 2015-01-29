@@ -51,6 +51,18 @@ class TRDefaultMapDataManager: NSObject {
         return getRegions().map { region -> String in region.name.getOrElse(self.kDefaultPlaceName) }
     }
     
+    func getPrefectureNames() -> [String] {
+        let prefectures = self.coreDataManager.fetchWithSortKey(kEntityNamePrefecture, sortKey: kSortKeyCD,
+            limit: 0, ascEnding: true) as [Prefecture]
+        return prefectures.map { pref -> String in pref.name.getOrElse("noname") }
+    }
+    
+    func getLargeAreasName() -> [String] {
+        let lAreas = self.coreDataManager.fetchWithSortKey(kEntityNameLargeArea, sortKey: kSortKeyCD,
+            limit: 0, ascEnding: true) as [LargeArea]
+        return lAreas.map { lArea -> String in lArea.name.getOrElse("nonae") }
+    }
+    
     func getPrefecturesNameWithRegionName(regionName: String) -> [String] {
         let prefectures = self.coreDataManager.fetchWithSortKey(kEntityNamePrefecture, sortKey: kSortKeyCD, limit: 0, ascEnding: true) as [Prefecture]
         

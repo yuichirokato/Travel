@@ -33,7 +33,7 @@
 		891558341A73EFB6005E237A /* TRTravelDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891558331A73EFB6005E237A /* TRTravelDataManager.swift */; };
 		892B1ADE1A1EE9FE00E5DEDF /* travely_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 892B1ADD1A1EE9FE00E5DEDF /* travely_icon@2x.png */; };
 		894BF6E51A6924AA00F2EE47 /* LocalMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BF6E41A6924AA00F2EE47 /* LocalMapViewController.swift */; };
-		894BF6E71A6925B300F2EE47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894BF6E61A6925B300F2EE47 /* MapKit.framework */; };
+		894BF6E71A6925B300F2EE47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894BF6E61A6925B300F2EE47 /* MapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		894BF6E91A69264500F2EE47 /* UserLocateMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BF6E81A69264500F2EE47 /* UserLocateMotion.swift */; };
 		894BF6ED1A69281500F2EE47 /* UserPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BF6EC1A69281500F2EE47 /* UserPath.swift */; };
 		894BF6EF1A692B1B00F2EE47 /* TRDrawUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BF6EE1A692B1B00F2EE47 /* TRDrawUtils.swift */; };
@@ -45,6 +45,16 @@
 		8972D0111A1B5C3E0041F931 /* TRRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972D0101A1B5C3E0041F931 /* TRRouter.swift */; };
 		8972D0131A1B65760041F931 /* TRUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972D0121A1B65760041F931 /* TRUtils.swift */; };
 		8991F2BB1A773209004EBB77 /* TRTreeViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8991F2BA1A773209004EBB77 /* TRTreeViewDataModel.swift */; };
+		89B8BD8A1A7A7E4600C512D9 /* CreateTravelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B8BD891A7A7E4600C512D9 /* CreateTravelView.xib */; };
+		89B8BD8C1A7A7E5700C512D9 /* SelectTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B8BD8B1A7A7E5700C512D9 /* SelectTermView.swift */; };
+		89C121361A77B7A9005EAC24 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C121341A77B7A9005EAC24 /* LlamaKit.framework */; };
+		89C121371A77B7A9005EAC24 /* LlamaKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89C121341A77B7A9005EAC24 /* LlamaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89C121381A77B7A9005EAC24 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C121351A77B7A9005EAC24 /* ReactiveCocoa.framework */; };
+		89C121391A77B7A9005EAC24 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89C121351A77B7A9005EAC24 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89C1213C1A77FCD9005EAC24 /* SelectDetailAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C1213B1A77FCD9005EAC24 /* SelectDetailAreaView.swift */; };
+		89C121411A780975005EAC24 /* TRCreateTravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C121401A780975005EAC24 /* TRCreateTravelModel.swift */; };
+		89C4EFBD1A7AA29900CEF7F0 /* CreateAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C4EFBC1A7AA29900CEF7F0 /* CreateAlbumViewController.swift */; };
+		89C4EFBF1A7AA2F600CEF7F0 /* not_show.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89C4EFBE1A7AA2F600CEF7F0 /* not_show.jpg */; };
 		89F08BF41A15912000DB4305 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F08BF31A15912000DB4305 /* AppDelegate.swift */; };
 		89F08BF71A15912000DB4305 /* Travely.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89F08BF51A15912000DB4305 /* Travely.xcdatamodeld */; };
 		89F08BF91A15912000DB4305 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F08BF81A15912000DB4305 /* ViewController.swift */; };
@@ -64,6 +74,21 @@
 			remoteInfo = Travely;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		89C1213A1A77B7A9005EAC24 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				89C121371A77B7A9005EAC24 /* LlamaKit.framework in Embed Frameworks */,
+				89C121391A77B7A9005EAC24 /* ReactiveCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4FBFC404CDA9564BD624F3D5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +132,14 @@
 		8989B6441A1591F600C34319 /* Travely-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Travely-Bridging-Header.h"; sourceTree = "<group>"; };
 		8989B6481A15933100C34319 /* libPods-MDCSwipeToChoose.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MDCSwipeToChoose.a"; path = "Pods/build/Debug-iphoneos/libPods-MDCSwipeToChoose.a"; sourceTree = "<group>"; };
 		8991F2BA1A773209004EBB77 /* TRTreeViewDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTreeViewDataModel.swift; sourceTree = "<group>"; };
+		89B8BD891A7A7E4600C512D9 /* CreateTravelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateTravelView.xib; sourceTree = "<group>"; };
+		89B8BD8B1A7A7E5700C512D9 /* SelectTermView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTermView.swift; sourceTree = "<group>"; };
+		89C121341A77B7A9005EAC24 /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = Carthage/Build/iOS/LlamaKit.framework; sourceTree = "<group>"; };
+		89C121351A77B7A9005EAC24 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		89C1213B1A77FCD9005EAC24 /* SelectDetailAreaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDetailAreaView.swift; sourceTree = "<group>"; };
+		89C121401A780975005EAC24 /* TRCreateTravelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRCreateTravelModel.swift; sourceTree = "<group>"; };
+		89C4EFBC1A7AA29900CEF7F0 /* CreateAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAlbumViewController.swift; sourceTree = "<group>"; };
+		89C4EFBE1A7AA2F600CEF7F0 /* not_show.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = not_show.jpg; sourceTree = "<group>"; };
 		89F08BEE1A15912000DB4305 /* Travely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F08BF21A15912000DB4305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89F08BF31A15912000DB4305 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +162,8 @@
 			files = (
 				894BF6E71A6925B300F2EE47 /* MapKit.framework in Frameworks */,
 				AE3D7BF2A494515ACE10AC54 /* libPods.a in Frameworks */,
+				89C121361A77B7A9005EAC24 /* LlamaKit.framework in Frameworks */,
+				89C121381A77B7A9005EAC24 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +180,8 @@
 		0310E8EB8C7A523BEEC2C59B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89C121341A77B7A9005EAC24 /* LlamaKit.framework */,
+				89C121351A77B7A9005EAC24 /* ReactiveCocoa.framework */,
 				894BF6E61A6925B300F2EE47 /* MapKit.framework */,
 				8989B6481A15933100C34319 /* libPods-MDCSwipeToChoose.a */,
 				D09EF11CEB35D3BEBA78E47D /* libPods.a */,
@@ -198,9 +235,23 @@
 		896347FD1A15D0F000683D4C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				89C4EFBE1A7AA2F600CEF7F0 /* not_show.jpg */,
 				892B1ADD1A1EE9FE00E5DEDF /* travely_icon@2x.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		89C1213D1A77FDBB005EAC24 /* createtravel */ = {
+			isa = PBXGroup;
+			children = (
+				896BE31C1A1C8AE800B7DEB9 /* CreateTravelViewController.swift */,
+				896F81AD1A77A55B00058AE6 /* SelectRegionView.swift */,
+				89C1213B1A77FCD9005EAC24 /* SelectDetailAreaView.swift */,
+				89B8BD8B1A7A7E5700C512D9 /* SelectTermView.swift */,
+				8991F2BA1A773209004EBB77 /* TRTreeViewDataModel.swift */,
+				89C121401A780975005EAC24 /* TRCreateTravelModel.swift */,
+			);
+			name = createtravel;
 			sourceTree = "<group>";
 		};
 		89F08BE51A15912000DB4305 = {
@@ -227,6 +278,7 @@
 		89F08BF01A15912000DB4305 /* Travely */ = {
 			isa = PBXGroup;
 			children = (
+				89C1213D1A77FDBB005EAC24 /* createtravel */,
 				894AAE4E1A75F20100937E62 /* lib */,
 				8915582E1A73CDB6005E237A /* utils */,
 				891558241A73AC6D005E237A /* coredata */,
@@ -234,15 +286,14 @@
 				89F08BF81A15912000DB4305 /* ViewController.swift */,
 				896BE3501A1CA9A300B7DEB9 /* MenuViewController.swift */,
 				890758251A1AEFC500E94E93 /* ContainerViewController.swift */,
-				896BE31C1A1C8AE800B7DEB9 /* CreateTravelViewController.swift */,
 				894BF6E41A6924AA00F2EE47 /* LocalMapViewController.swift */,
 				894BF6F01A69316C00F2EE47 /* TRDisplaySaveTravelViewController.swift */,
 				894BF6E81A69264500F2EE47 /* UserLocateMotion.swift */,
 				890758271A1AF19A00E94E93 /* TRExtensions.swift */,
 				8972D0101A1B5C3E0041F931 /* TRRouter.swift */,
-				896F81AD1A77A55B00058AE6 /* SelectRegionView.swift */,
-				8991F2BA1A773209004EBB77 /* TRTreeViewDataModel.swift */,
+				89C4EFBC1A7AA29900CEF7F0 /* CreateAlbumViewController.swift */,
 				89F08BFA1A15912000DB4305 /* Main.storyboard */,
+				89B8BD891A7A7E4600C512D9 /* CreateTravelView.xib */,
 				89F08BFD1A15912000DB4305 /* Images.xcassets */,
 				89F08BFF1A15912000DB4305 /* LaunchScreen.xib */,
 				89F08BF51A15912000DB4305 /* Travely.xcdatamodeld */,
@@ -302,6 +353,7 @@
 				89F08BEB1A15912000DB4305 /* Frameworks */,
 				89F08BEC1A15912000DB4305 /* Resources */,
 				41FEC219830C304D7008ADA3 /* Copy Pods Resources */,
+				89C1213A1A77B7A9005EAC24 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -384,8 +436,10 @@
 				891558041A73A1FC005E237A /* areaName10.json in Resources */,
 				892B1ADE1A1EE9FE00E5DEDF /* travely_icon@2x.png in Resources */,
 				89F08BFC1A15912000DB4305 /* Main.storyboard in Resources */,
+				89B8BD8A1A7A7E4600C512D9 /* CreateTravelView.xib in Resources */,
 				891558031A73A1FC005E237A /* areaName05.json in Resources */,
 				8915580B1A73A1FC005E237A /* areaName45.json in Resources */,
+				89C4EFBF1A7AA2F600CEF7F0 /* not_show.jpg in Resources */,
 				891558071A73A1FC005E237A /* areaName25.json in Resources */,
 				891558021A73A1FC005E237A /* areaName01.json in Resources */,
 				89F08C011A15912000DB4305 /* LaunchScreen.xib in Resources */,
@@ -447,14 +501,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C1213C1A77FCD9005EAC24 /* SelectDetailAreaView.swift in Sources */,
 				89F08BF91A15912000DB4305 /* ViewController.swift in Sources */,
 				894BF6F11A69316C00F2EE47 /* TRDisplaySaveTravelViewController.swift in Sources */,
 				891558181A73A8B9005E237A /* LargeArea.swift in Sources */,
 				890758281A1AF19A00E94E93 /* TRExtensions.swift in Sources */,
 				89F08BF41A15912000DB4305 /* AppDelegate.swift in Sources */,
 				894BF6E51A6924AA00F2EE47 /* LocalMapViewController.swift in Sources */,
+				89C4EFBD1A7AA29900CEF7F0 /* CreateAlbumViewController.swift in Sources */,
 				890758261A1AEFC500E94E93 /* ContainerViewController.swift in Sources */,
 				891558161A73A8B8005E237A /* Prefecture.swift in Sources */,
+				89C121411A780975005EAC24 /* TRCreateTravelModel.swift in Sources */,
 				891558221A73A925005E237A /* SwiftyJSON.swift in Sources */,
 				894BF6E91A69264500F2EE47 /* UserLocateMotion.swift in Sources */,
 				896F81AE1A77A55B00058AE6 /* SelectRegionView.swift in Sources */,
@@ -472,6 +529,7 @@
 				8972D0131A1B65760041F931 /* TRUtils.swift in Sources */,
 				8915581C1A73A8B9005E237A /* SmallArea.swift in Sources */,
 				8915581A1A73A8B9005E237A /* Region.swift in Sources */,
+				89B8BD8C1A7A7E5700C512D9 /* SelectTermView.swift in Sources */,
 				894BF6F31A69376900F2EE47 /* TRLog.swift in Sources */,
 				896BE31D1A1C8AE800B7DEB9 /* CreateTravelViewController.swift in Sources */,
 			);
@@ -599,6 +657,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Travely/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -620,6 +682,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Travely/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

@@ -45,21 +45,28 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         
         cell.foreach { c in
-            switch c.textLabel!.text {
-            case .Some(let text) where text == "思い出を振り返る":
+            switch c.textLabel!.text! {
+            case "思い出を振り返る":
                 let viewController = TRUtils.getViewController("mainView")
                 self.sidePanelController.centerPanel = UINavigationController(rootViewController: viewController)
             
-            case .Some(let text) where text == "思い出を作る":
-                TRLog.log("create travel")
+            case "思い出を作る" where CreateTravelViewController.isSaveTravel == false:
+                TRLog.log("create travel view")
                 let viewController = TRUtils.getViewController("createTravelView")
                 self.sidePanelController.centerPanel = UINavigationController(rootViewController: viewController)
                 
-            case .Some(let text) where text == "アルバムを作る":
-                let viewController = TRUtils.getViewController("")
+            case "思い出を作る" where CreateTravelViewController.isSaveTravel == true:
+                TRLog.log("local map view")
+                let viewController = TRUtils.getViewController("localMapViewController")
                 self.sidePanelController.centerPanel = UINavigationController(rootViewController: viewController)
                 
-            case .Some(let text) where text == "ShareMapを見る":
+            case "アルバムを作る":
+                TRLog.log("create album view")
+                let viewController = TRUtils.getViewController("createAlbumViewController")
+                self.sidePanelController.centerPanel = UINavigationController(rootViewController: viewController)
+                
+            case "ShareMapを見る":
+                TRLog.log("share map view")
                 let viewController = TRUtils.getViewController("")
                 self.sidePanelController.centerPanel = UINavigationController(rootViewController: viewController)
                 

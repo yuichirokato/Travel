@@ -7,136 +7,116 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
-class CreateTravelViewController: UIViewController, RATreeViewDelegate, RATreeViewDataSource {
+class CreateTravelViewController: UIViewController {
     
     @IBOutlet weak var destinationPlaceLabel: UILabel!
     @IBOutlet weak var nextButton: UIBarButtonItem!
     private var treeView: RATreeView!
     
     private let defaultMapDataManager: TRDefaultMapDataManager!
+    private let travelDatamanager: TRTravelDataManager!
     private let kPlaceDatas: [TRTreeViewDataModel]!
-    private let kPlaceCell = "placeCell"
-    private var selectedPlaceName: String?
-    private let kDefaultText = "どこにお出かけですか？"
+    private let kViewStateSelectRegionView: Int = 0
+    private let kViewStateSelectDetailView: Int = 1
+    private let kviewStateSelectTermView: Int = 2
+    
+    struct Static {
+        static var isSaveTravel = false
+    }
+    
+    class var isSaveTravel: Bool {
+        get { return Static.isSaveTravel }
+        set { Static.isSaveTravel = newValue }
+    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.defaultMapDataManager = TRDefaultMapDataManager.sharedManager
-        self.kPlaceDatas = self.regions2TRTreeViewDataModel()
+        self.travelDatamanager = TRTravelDataManager.sharedManager
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.treeView = self.initializeTreeView()
-        self.destinationPlaceLabel.text = kDefaultText
-        self.barButtonHiddenOrShow()
-        self.view.addSubview(self.treeView)
+        let selectRegionView = SelectRegionView(frame: self.view.bounds)
+        self.navigationItem.title = "目的地選択（県）"
+        self.changeViewWithFromView(selectRegionView, viewState: kViewStateSelectRegionView)
+        
+        self.view.addSubview(selectRegionView)
     }
     
-    private func regions2TRTreeViewDataModel() -> [TRTreeViewDataModel] {
-        return self.defaultMapDataManager.getRegionsName().map { name -> TRTreeViewDataModel in
-            TRTreeViewDataModel(name: name, children: self.prefectures2TRTreeViewDataModel(name))
-        }
-    }
-    
-    private func prefectures2TRTreeViewDataModel(regionName: String) -> [TRTreeViewDataModel] {
-        return self.defaultMapDataManager.getPrefecturesNameWithRegionName(regionName).map {
-            prefName -> TRTreeViewDataModel in
-            TRTreeViewDataModel(name: prefName, children: [TRTreeViewDataModel(name: "nil", children: nil)])
-        }
-    }
-    
-    private func initializeTreeView() -> RATreeView {
-        let treeView = RATreeView(frame: CGRectMake(0, 333, 375, 334))
-        treeView.delegate = self
-        treeView.dataSource = self
-        treeView.bounces = false
-        return treeView
-    }
-    
-    private func setCellAttributesWithLevel(cell: UITableViewCell, level: Int, andModel model: TRTreeViewDataModel) -> UITableViewCell {
-        switch level {
-        case 0: cell.backgroundColor = TRDrawUtils.getActivityColorWithHex(0x90EE90)
+    private func changeViewWithFromView(fromView: UIView, viewState: Int) {
+        switch viewState {
+        case 0:
+            setSignalsForselectDetailAreaView(fromView, viewState: viewState)
         case 1:
-            cell.backgroundColor = TRDrawUtils.getActivityColorWithHex(0x87CEEB)
-            cell.accessoryView? = createButton()
-        default: cell.backgroundColor = TRDrawUtils.getActivityColorWithHex(0x90EE90)
-        }
-        cell.textLabel?.text = model.name
-        cell.selectionStyle = .None
-        return cell
-    }
-    
-    private func createButton() -> UIButton {
-        TRLog.log("createButton!")
-        let button = UIButton()
-        button.setTitle("+", forState: .Normal)
-        button.frame = CGRectMake(0, 0, 20, 20)
-        button.tag = 1
-        button.layer.cornerRadius = 10
-        button.addTarget(self, action: "tapped:", forControlEvents:.TouchUpInside)
-        return button
-    }
-    
-    func tapped(sender: AnyObject) {
-        TRLog.log("tapped!")
-    }
-    
-    private func barButtonHiddenOrShow() {
-        if self.destinationPlaceLabel.text == kDefaultText {
-            self.nextButton.enabled = false
-            self.nextButton.tintColor = UIColor(white: 0, alpha: 0)
-            return
-        }
-        
-        self.nextButton.enabled = true
-        self.nextButton.tintColor = nil
-    }
-    
-    //MARK: - tree view delegate
-    func treeView(treeView: RATreeView!, willSelectRowForItem item: AnyObject!) -> AnyObject! {
-        let cell = self.treeView(treeView, cellForItem: item) as UITableViewCell
-        let obj = item as TRTreeViewDataModel
-        let level = self.treeView.levelForCellForItem(item)
-        
-        if level == 1 {
-            self.destinationPlaceLabel.text = obj.name
-            self.barButtonHiddenOrShow()
-            return nil
-        }
-        return cell
-    }
-    
-    
-    //MARK: - tree view data source
-    func treeView(treeView: RATreeView!, numberOfChildrenOfItem item: AnyObject!) -> Int {
-        switch item {
-        case .Some(let model) where (model as TRTreeViewDataModel).children != nil:
-            return (model as TRTreeViewDataModel).children!.count
+            setSignalsForSelectTermView(fromView, viewState: viewState)
         default:
-            return self.kPlaceDatas.count
+            setSignalsForselectDetailAreaView(fromView, viewState: viewState)
         }
     }
     
-    func treeView(treeView: RATreeView!, cellForItem item: AnyObject!) -> UITableViewCell! {
-        let model = item as TRTreeViewDataModel
-        let level = self.treeView.levelForCellForItem(item)
-        let numberOfChildren = model.children!.count
-        let cell: UITableViewCell? = self.treeView.dequeueReusableCellWithIdentifier(kPlaceCell) as? UITableViewCell
+    private func setSignalsForselectDetailAreaView(selectRegionView: UIView, viewState: Int) {
+        let command = RACCommand(enabled: self.setEnableForNextButton(selectRegionView,
+        key: "kPrefLabel.text")) { input -> RACSignal! in
+            self.navigationItem.title = "目的地選択（詳細地域）"
+            let regionView = selectRegionView as SelectRegionView
+            let selectDetailAreaView = SelectDetailAreaView(frame: self.view.bounds,
+                selectedPref: regionView.kPrefLabel.text!)
+            self.view.addSubview(selectDetailAreaView)
+            selectDetailAreaView.alpha = 0.0
+            self.animationFadeInAndFadeOut(selectRegionView, fadeInView: selectDetailAreaView)
+            self.changeViewWithFromView(selectDetailAreaView, viewState: self.kViewStateSelectDetailView)
+            return RACSignal.empty()
+        }
+        self.nextButton.rac_command = command
+    }
+    
+    private func setSignalsForSelectTermView(view: UIView, viewState: Int) {
+        let command = RACCommand(enabled: self.setEnableForNextButton(view, key: "kDetailAreaLabel.text")) {
+            input -> RACSignal! in
+            self.navigationItem.title = "旅行期間選択"
+            let selectDetailAreaView = view as SelectDetailAreaView
+            self.nextButton.tintColor = UIColor(white: 0, alpha: 0)
+            self.nextButton.enabled = false
+            
+            let nib = UINib(nibName: "CreateTravelView", bundle: nil)
+            let selectTermview = nib.instantiateWithOwner(nil, options: nil)[0] as SelectTermView
+            selectTermview.prefectureLabel.text = selectDetailAreaView.kSelectedPrefLabel.text
+            selectTermview.detailAreaLAbel.text = selectDetailAreaView.kDetailAreaLabel.text
+            
+            let completeSignal = selectTermview.completeCreateTravelBtn.rac_command.executionSignals.flatten()
+            
+            self.rac_liftSelector("startSaveTravel:", withSignalsFromArray: [completeSignal])
+            
+            self.view.addSubview(selectTermview)
+            
+            selectTermview.alpha = 0.0
+            self.animationFadeInAndFadeOut(selectDetailAreaView, fadeInView: selectTermview)
+            
+            return RACSignal.empty()
+        }
+        self.nextButton.rac_command = command
+    }
+    
+    private func setEnableForNextButton(stateView: UIView, key: String) -> RACSignal {
+        return stateView.rac_valuesForKeyPath(key, observer: stateView).map {
+            text -> AnyObject! in (text as String) != ""
+        }
+    }
+    
+    private func animationFadeInAndFadeOut(fadeOutView: UIView, fadeInView: UIView) {
+        UIView.animateWithDuration(1.0, animations: { fadeOutView.alpha = 0.0 }, completion: { value in
+            UIView.animateWithDuration(1.0) { fadeInView.alpha = 1.0 }
+        })
+    }
+    
+    func startSaveTravel(sender: AnyObject) {
         
-        switch cell {
-        case .Some(let c): return setCellAttributesWithLevel(c, level: level, andModel: model)
-        case .None:
-            let c = UITableViewCell(style: .Default, reuseIdentifier: kPlaceCell)
-            return setCellAttributesWithLevel(c, level: level, andModel: model)
-        }
-    }
-    
-    func treeView(treeView: RATreeView!, child index: Int, ofItem item: AnyObject!) -> AnyObject! {
-        switch item as? TRTreeViewDataModel {
-        case .Some(let model) where model.children != nil: return model.children![index]
-        default: return self.kPlaceDatas[index]
-        }
+        self.view.subviews.foreach { view in (view as UIView).removeFromSuperview() }
+        
+        let localMapViewController = self.storyboard!.instantiateViewControllerWithIdentifier("localMapViewController") as LocalMapViewController
+        self.sidePanelController.centerPanel = UINavigationController(rootViewController: localMapViewController)
     }
 }

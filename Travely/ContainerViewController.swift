@@ -26,7 +26,7 @@ class ContainerViewController: JASidePanelController {
         let leftController = storyBoard.instantiateViewControllerWithIdentifier("menuView") as MenuViewController
         let centerController = storyBoard.instantiateViewControllerWithIdentifier("mainView") as ViewController
         
-        self.leftPanel = storyBoard.instantiateViewControllerWithIdentifier("menuView") as MenuViewController
-        self.centerPanel  = UINavigationController(rootViewController:  storyBoard.instantiateViewControllerWithIdentifier("mainView") as ViewController)
+        self.leftPanel = leftController
+        self.centerPanel = UINavigationController(rootViewController: centerController)
     }
 }

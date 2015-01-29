@@ -18,3 +18,9 @@
 #define COCOAPODS_VERSION_MINOR_RATreeView 9
 #define COCOAPODS_VERSION_PATCH_RATreeView 2
 
+// RMDateSelectionViewController
+#define COCOAPODS_POD_AVAILABLE_RMDateSelectionViewController
+#define COCOAPODS_VERSION_MAJOR_RMDateSelectionViewController 1
+#define COCOAPODS_VERSION_MINOR_RMDateSelectionViewController 4
+#define COCOAPODS_VERSION_PATCH_RMDateSelectionViewController 2
+

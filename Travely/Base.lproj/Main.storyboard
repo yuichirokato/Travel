@@ -13,7 +13,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIE-v0-mrE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2489.5" y="148.5"/>
+            <point key="canvasLocation" x="2549.5" y="148.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -56,26 +56,17 @@
                     <view key="view" contentMode="scaleToFill" id="rgE-PH-SCA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUc-tI-SG7">
-                                <rect key="frame" x="45" y="110" width="284" height="25"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="coL-b6-CTt">
-                        <barButtonItem key="rightBarButtonItem" title="next" id="opu-N5-3V5"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="opu-N5-3V5"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="destinationPlaceLabel" destination="ZUc-tI-SG7" id="MkX-E0-7Qm"/>
                         <outlet property="nextButton" destination="opu-N5-3V5" id="Hy6-fK-RgT"/>
                     </connections>
                 </viewController>
@@ -107,10 +98,49 @@
             </objects>
             <point key="canvasLocation" x="3349.5" y="870.5"/>
         </scene>
-        <!--Local Map View Controller-->
+        <!--工事中-->
+        <scene sceneID="g7b-cO-wGI">
+            <objects>
+                <viewController storyboardIdentifier="createAlbumViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fLd-E1-Czm" customClass="CreateAlbumViewController" customModule="Travely" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ba3-5l-U40"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lkd-Yw-chn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dVW-9s-G6v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hkn-bT-ZsU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9Ze-9N-8kO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qKv-b6-nAn">
+                                            <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="工事中" id="XiT-Zo-j9D"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="not_show_image" destination="qKv-b6-nAn" id="Y5K-iO-4Ec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p9m-eP-1M4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2956.5" y="1614.5"/>
+        </scene>
+        <!--SaveTravel-->
         <scene sceneID="PeQ-Iw-Eqm">
             <objects>
-                <viewController storyboardIdentifier="localMapView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MYf-Nd-Bqh" customClass="LocalMapViewController" customModule="Travely" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="localMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MYf-Nd-Bqh" customClass="LocalMapViewController" customModule="Travely" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BYy-c7-ZgG"/>
                         <viewControllerLayoutGuide type="bottom" id="gso-3O-c6y"/>
@@ -119,14 +149,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Cfw-7b-JyC">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cfw-7b-JyC">
+                                <rect key="frame" x="0.0" y="64" width="375" height="313"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MYf-Nd-Bqh" id="RLb-YY-bdp"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="SaveTravel" id="dvs-YX-DA1">
+                        <barButtonItem key="rightBarButtonItem" title="完了" id="IwS-0J-qw9"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="completeSaveTravelPathBtn" destination="IwS-0J-qw9" id="jMm-QR-IT1"/>
                         <outlet property="localMapView" destination="Cfw-7b-JyC" id="PaT-Pe-t0h"/>
                     </connections>
                 </viewController>
@@ -169,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbQ-1Z-eu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3437.5" y="148.5"/>
+            <point key="canvasLocation" x="3349.5" y="148.5"/>
         </scene>
         <!--Display Save Travel View Controller-->
         <scene sceneID="3o2-38-1WQ">
@@ -199,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSG-PC-ecS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3915.5" y="148.5"/>
+            <point key="canvasLocation" x="3735.5" y="148.5"/>
         </scene>
     </scenes>
 </document>
