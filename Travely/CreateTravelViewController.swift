@@ -16,7 +16,6 @@ class CreateTravelViewController: UIViewController {
     private var treeView: RATreeView!
     
     private let defaultMapDataManager: TRDefaultMapDataManager!
-    private let travelDatamanager: TRTravelDataManager!
     private let kPlaceDatas: [TRTreeViewDataModel]!
     private let kViewStateSelectRegionView: Int = 0
     private let kViewStateSelectDetailView: Int = 1
@@ -34,7 +33,6 @@ class CreateTravelViewController: UIViewController {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.defaultMapDataManager = TRDefaultMapDataManager.sharedManager
-        self.travelDatamanager = TRTravelDataManager.sharedManager
     }
     
     override func viewDidLoad() {

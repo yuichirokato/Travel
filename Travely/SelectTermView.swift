@@ -52,7 +52,10 @@ class SelectTermView: UIView {
         
         self.completeCreateTravelBtn.backgroundColor = TRDrawUtils.getActivityColorWithHex(0x00FA9A)
         self.completeCreateTravelBtn.rac_command = RACCommand(enabled: self.createEnabledSignal(today)) {
-            input -> RACSignal in RACSignal.`return`(input)
+            input -> RACSignal in
+            TRCreateTravelModel.insertTravel(self.prefectureLabel.text!, detailArea: self.detailAreaLAbel.text!, departureDate: self.departureDateLabel.text!, returnDate: self.returnDateLabel.text!)
+            
+            return RACSignal.`return`(input)
         }
     }
     

@@ -8,15 +8,23 @@
 
 import UIKit
 import Foundation
+import ReactiveCocoa
 
 class ViewController: UIViewController {
     
     var router: TRRouter?
     let manager = TRDefaultMapDataManager.sharedManager
+    let imageData = ["IMG_4091.JPG", "IMG_4093.JPG", "IMG_4094.JPG", "IMG_4095.JPG", "IMG_4097.JPG"
+    , "IMG_4098.JPG", "IMG_4099.jpg", "IMG_4101.JPG", "IMG_4102.JPG", "IMG_4103.JPG"]
+    
+    @IBOutlet weak var travelImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.router = TRRouter()
+        
+        self.travelImage.alpha = 0.0
+        self.travelImage.image = UIImage(named: self.imageData[8])
         
         if (!isLaunchedAfterFirst()) {
             println("firstest!")
@@ -24,6 +32,8 @@ class ViewController: UIViewController {
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasLaunchedOnce")
             NSUserDefaults.standardUserDefaults().synchronize()
         }
+        
+        self.animationImage()
         
         manager.getRegionsName().foreach { TRLog.log("getRegionName = \($0)") }
     }
@@ -48,6 +58,19 @@ class ViewController: UIViewController {
             let json = JSON(data: data!)
             self.manager.insertMapData(json["Results"]["Area"])
         }
+    }
+    
+    private func animationImage() {
+        let randomNumber = arc4random() % UInt32(self.imageData.count)
+        let image = UIImage(named: self.imageData[Int(randomNumber)])
+        
+        UIView.animateWithDuration(4.0, animations: { self.travelImage.alpha = 0.0 }, completion: { value in
+            UIView.animateWithDuration(4.0) {
+                self.travelImage.image = image
+                self.travelImage.alpha = 1.0
+                self.animationImage()
+            }
+        })
     }
     
     override func didReceiveMemoryWarning() {

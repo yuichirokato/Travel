@@ -13,12 +13,14 @@ class TRDisplaySaveTravelViewController: UIViewController, MKMapViewDelegate {
     
     private let kLineWidth: CGFloat = 10.0
     private let kAlphaComponent: CGFloat = 0.7
+    private let travelDataManger = TRTravelDataManager.sharedManager
     var paths: [UserPath]?
 
     @IBOutlet weak var displaySaveTravelMapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.paths = self.travelDataManger.getAllUserPath()
         switch paths {
         case .Some(let locations) where locations.count > 0: drawActivity(locations)
         default: NSLog("None userPaths Data!")
@@ -31,7 +33,7 @@ class TRDisplaySaveTravelViewController: UIViewController, MKMapViewDelegate {
     }
     
     private func drawActivity(paths: [UserPath]) {
-        var coordinates = paths.map { (path: UserPath) -> CLLocationCoordinate2D in
+        var coordinates = paths.map { path -> CLLocationCoordinate2D in
             let lat = CLLocationDegrees(path.latitude!)
             let long = CLLocationDegrees(path.longitude!)
             return CLLocationCoordinate2D(latitude: lat, longitude: long)

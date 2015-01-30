@@ -14,6 +14,10 @@ class TRCreateTravelModel: NSObject {
         return TRDefaultMapDataManager.sharedManager
     }
     
+    private class var travelDataManger: TRTravelDataManager {
+        return TRTravelDataManager.sharedManager
+    }
+    
     class func regions2TRTreeViewDataModel() -> [TRTreeViewDataModel] {
         return self.defaultMapDataManager.getRegionsName().map { name -> TRTreeViewDataModel in
             TRTreeViewDataModel(name: name, children: self.prefectures2TRTreeViewDataModel(name))
@@ -39,6 +43,10 @@ class TRCreateTravelModel: NSObject {
             sAreaName -> TRTreeViewDataModel in
             TRTreeViewDataModel(name: sAreaName, children: [TRTreeViewDataModel(name: "nil", children: nil)])
         }
+    }
+    
+    class func insertTravel(pref: String, detailArea: String, departureDate: String, returnDate: String) {
+        self.travelDataManger.insertTravel(pref, detailArea: detailArea, departureDate: departureDate, returnDate: returnDate)
     }
 
 }

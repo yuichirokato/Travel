@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Travel" representedClassName="Travel" syncable="YES">
+        <attribute name="departureDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="destinationDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="destinationPrefecture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="returnDate" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TravelPoint" representedClassName="TravelPoint" syncable="YES">
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="placeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="UserPath" representedClassName="UserPath" syncable="YES">
         <attribute name="activityColorHex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -7,6 +21,8 @@
         <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Travel" positionX="-54" positionY="18" width="128" height="105"/>
         <element name="UserPath" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="TravelPoint" positionX="-54" positionY="27" width="128" height="135"/>
     </elements>
 </model>

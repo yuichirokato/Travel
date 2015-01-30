@@ -15,6 +15,8 @@ class TRTravelDataManager: NSObject {
     
     private let kStoreName = "Travely"
     private let kEntityNameUserPath = "UserPath"
+    private let kEntityNameTravel = "Travel"
+    private let kEntityNameTravelPoint = "TravelPoint"
     
     // MARK: - singleton pattern
     class var sharedManager: TRTravelDataManager {
@@ -46,6 +48,28 @@ class TRTravelDataManager: NSObject {
             userPath.latitude = lm.location.coordinate.latitude
             userPath.timestamp = lm.location.timestamp
             userPath.activityColorHex = activityColorHex
+        }
+    }
+    
+    func insertTravel(pref: String, detailArea: String, departureDate: String, returnDate: String) {
+        self.coreDataManager.asyncInsertBlock {
+            let travel = self.coreDataManager.entityForInsert(self.kEntityNameTravel) as Travel
+            travel.destinationPrefecture = pref
+            travel.destinationDetail = detailArea
+            travel.departureDate = departureDate
+            travel.returnDate = returnDate
+        }
+    }
+    
+    func insertTravelPoint(longitude: Double, latitude: Double, name: String, imageUrl: String?, timestamp: String, comment: String?) {
+        self.coreDataManager.asyncInsertBlock {
+            let travelPoint = self.coreDataManager.entityForInsert(self.kEntityNameTravelPoint) as TravelPoint
+            travelPoint.longitude = longitude
+            travelPoint.latitude = latitude
+            travelPoint.placeName = name
+            travelPoint.imageUrl = imageUrl
+            travelPoint.timestamp = timestamp
+            travelPoint.comment = comment
         }
     }
     

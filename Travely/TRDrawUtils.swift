@@ -17,14 +17,14 @@ class TRDrawUtils: NSObject {
     class var hexColorBlue:   UInt { return 0x1d62f0 }
     class var hexColorGray:   UInt { return 0xC7C7CC }
     
-    class func getActivityColor(activity: CMMotionActivity?) -> UIColor {
+    class func getActivityColor(activity: CMMotionActivity?) -> UInt {
         switch activity {
-        case .Some(let activity) where activity.stationary: return UIColor.blueColor()
-        case .Some(let activity) where activity.walking:    return UIColor.greenColor()
-        case .Some(let activity) where activity.running:    return UIColor.yellowColor()
-        case .Some(let activity) where activity.cycling:    return UIColor.orangeColor()
-        case .Some(let activity) where activity.automotive: return UIColor.redColor()
-        default:                                            return UIColor.grayColor()
+        case .Some(let activity) where activity.stationary: return hexColorBlue
+        case .Some(let activity) where activity.walking:    return hexColorGreen
+        case .Some(let activity) where activity.running:    return hexColorYellow
+        case .Some(let activity) where activity.cycling:    return hexColorOrange
+        case .Some(let activity) where activity.automotive: return hexColorRed
+        default:                                            return hexColorGray
         }
     }
     

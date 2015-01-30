@@ -67,7 +67,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
             case "ShareMapを見る":
                 TRLog.log("share map view")
-                let viewController = TRUtils.getViewController("")
+                let viewController = TRUtils.getViewController("shareMapView")
                 self.sidePanelController.centerPanel = UINavigationController(rootViewController: viewController)
                 
             default:

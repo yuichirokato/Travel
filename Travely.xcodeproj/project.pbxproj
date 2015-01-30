@@ -31,6 +31,7 @@
 		8915582D1A73CD85005E237A /* TRJsonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915582C1A73CD85005E237A /* TRJsonUtils.swift */; };
 		891558321A73E573005E237A /* TRDefaultCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891558311A73E573005E237A /* TRDefaultCoreDataManager.swift */; };
 		891558341A73EFB6005E237A /* TRTravelDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891558331A73EFB6005E237A /* TRTravelDataManager.swift */; };
+		892AE9521A7AC43F00E847A5 /* TravelPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892AE9511A7AC43F00E847A5 /* TravelPoint.swift */; };
 		892B1ADE1A1EE9FE00E5DEDF /* travely_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 892B1ADD1A1EE9FE00E5DEDF /* travely_icon@2x.png */; };
 		894BF6E51A6924AA00F2EE47 /* LocalMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894BF6E41A6924AA00F2EE47 /* LocalMapViewController.swift */; };
 		894BF6E71A6925B300F2EE47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894BF6E61A6925B300F2EE47 /* MapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -45,6 +46,7 @@
 		8972D0111A1B5C3E0041F931 /* TRRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972D0101A1B5C3E0041F931 /* TRRouter.swift */; };
 		8972D0131A1B65760041F931 /* TRUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972D0121A1B65760041F931 /* TRUtils.swift */; };
 		8991F2BB1A773209004EBB77 /* TRTreeViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8991F2BA1A773209004EBB77 /* TRTreeViewDataModel.swift */; };
+		89A966221A7AC128003F18F0 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A966211A7AC128003F18F0 /* Travel.swift */; };
 		89B8BD8A1A7A7E4600C512D9 /* CreateTravelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B8BD891A7A7E4600C512D9 /* CreateTravelView.xib */; };
 		89B8BD8C1A7A7E5700C512D9 /* SelectTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B8BD8B1A7A7E5700C512D9 /* SelectTermView.swift */; };
 		89C121361A77B7A9005EAC24 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C121341A77B7A9005EAC24 /* LlamaKit.framework */; };
@@ -53,6 +55,17 @@
 		89C121391A77B7A9005EAC24 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89C121351A77B7A9005EAC24 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		89C1213C1A77FCD9005EAC24 /* SelectDetailAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C1213B1A77FCD9005EAC24 /* SelectDetailAreaView.swift */; };
 		89C121411A780975005EAC24 /* TRCreateTravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C121401A780975005EAC24 /* TRCreateTravelModel.swift */; };
+		89C2A1181A7B45F5005D0D7A /* ShareMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C2A1171A7B45F5005D0D7A /* ShareMapViewController.swift */; };
+		89C46FAE1A7B2C1B003789B1 /* IMG_4091.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 89C46FA41A7B2C1B003789B1 /* IMG_4091.JPG */; };
+		89C46FAF1A7B2C1B003789B1 /* IMG_4093.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 89C46FA51A7B2C1B003789B1 /* IMG_4093.JPG */; };
+		89C46FB01A7B2C1B003789B1 /* IMG_4094.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 89C46FA61A7B2C1B003789B1 /* IMG_4094.JPG */; };
+		89C46FB11A7B2C1B003789B1 /* IMG_4095.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 89C46FA71A7B2C1B003789B1 /* IMG_4095.JPG */; };
+		89C46FB21A7B2C1B003789B1 /* IMG_4097.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 89C46FA81A7B2C1B003789B1 /* IMG_4097.JPG */; };
+		89C46FB31A7B2C1B003789B1 /* IMG_4098.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 89C46FA91A7B2C1B003789B1 /* IMG_4098.JPG */; };
+		89C46FB41A7B2C1B003789B1 /* IMG_4099.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89C46FAA1A7B2C1B003789B1 /* IMG_4099.jpg */; };
+		89C46FB51A7B2C1B003789B1 /* IMG_4101.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 89C46FAB1A7B2C1B003789B1 /* IMG_4101.JPG */; };
+		89C46FB61A7B2C1B003789B1 /* IMG_4102.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 89C46FAC1A7B2C1B003789B1 /* IMG_4102.JPG */; };
+		89C46FB71A7B2C1B003789B1 /* IMG_4103.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 89C46FAD1A7B2C1B003789B1 /* IMG_4103.JPG */; };
 		89C4EFBD1A7AA29900CEF7F0 /* CreateAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C4EFBC1A7AA29900CEF7F0 /* CreateAlbumViewController.swift */; };
 		89C4EFBF1A7AA2F600CEF7F0 /* not_show.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89C4EFBE1A7AA2F600CEF7F0 /* not_show.jpg */; };
 		89F08BF41A15912000DB4305 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F08BF31A15912000DB4305 /* AppDelegate.swift */; };
@@ -116,6 +129,7 @@
 		8915582C1A73CD85005E237A /* TRJsonUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRJsonUtils.swift; sourceTree = "<group>"; };
 		891558311A73E573005E237A /* TRDefaultCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRDefaultCoreDataManager.swift; sourceTree = "<group>"; };
 		891558331A73EFB6005E237A /* TRTravelDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTravelDataManager.swift; sourceTree = "<group>"; };
+		892AE9511A7AC43F00E847A5 /* TravelPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelPoint.swift; sourceTree = "<group>"; };
 		892B1ADD1A1EE9FE00E5DEDF /* travely_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "travely_icon@2x.png"; sourceTree = "<group>"; };
 		894BF6E41A6924AA00F2EE47 /* LocalMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalMapViewController.swift; sourceTree = "<group>"; };
 		894BF6E61A6925B300F2EE47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -132,12 +146,24 @@
 		8989B6441A1591F600C34319 /* Travely-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Travely-Bridging-Header.h"; sourceTree = "<group>"; };
 		8989B6481A15933100C34319 /* libPods-MDCSwipeToChoose.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MDCSwipeToChoose.a"; path = "Pods/build/Debug-iphoneos/libPods-MDCSwipeToChoose.a"; sourceTree = "<group>"; };
 		8991F2BA1A773209004EBB77 /* TRTreeViewDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTreeViewDataModel.swift; sourceTree = "<group>"; };
+		89A966211A7AC128003F18F0 /* Travel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		89B8BD891A7A7E4600C512D9 /* CreateTravelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateTravelView.xib; sourceTree = "<group>"; };
 		89B8BD8B1A7A7E5700C512D9 /* SelectTermView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTermView.swift; sourceTree = "<group>"; };
 		89C121341A77B7A9005EAC24 /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = Carthage/Build/iOS/LlamaKit.framework; sourceTree = "<group>"; };
 		89C121351A77B7A9005EAC24 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		89C1213B1A77FCD9005EAC24 /* SelectDetailAreaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDetailAreaView.swift; sourceTree = "<group>"; };
 		89C121401A780975005EAC24 /* TRCreateTravelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRCreateTravelModel.swift; sourceTree = "<group>"; };
+		89C2A1171A7B45F5005D0D7A /* ShareMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareMapViewController.swift; sourceTree = "<group>"; };
+		89C46FA41A7B2C1B003789B1 /* IMG_4091.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_4091.JPG; sourceTree = "<group>"; };
+		89C46FA51A7B2C1B003789B1 /* IMG_4093.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_4093.JPG; sourceTree = "<group>"; };
+		89C46FA61A7B2C1B003789B1 /* IMG_4094.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_4094.JPG; sourceTree = "<group>"; };
+		89C46FA71A7B2C1B003789B1 /* IMG_4095.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_4095.JPG; sourceTree = "<group>"; };
+		89C46FA81A7B2C1B003789B1 /* IMG_4097.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_4097.JPG; sourceTree = "<group>"; };
+		89C46FA91A7B2C1B003789B1 /* IMG_4098.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_4098.JPG; sourceTree = "<group>"; };
+		89C46FAA1A7B2C1B003789B1 /* IMG_4099.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_4099.jpg; sourceTree = "<group>"; };
+		89C46FAB1A7B2C1B003789B1 /* IMG_4101.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_4101.JPG; sourceTree = "<group>"; };
+		89C46FAC1A7B2C1B003789B1 /* IMG_4102.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_4102.JPG; sourceTree = "<group>"; };
+		89C46FAD1A7B2C1B003789B1 /* IMG_4103.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_4103.JPG; sourceTree = "<group>"; };
 		89C4EFBC1A7AA29900CEF7F0 /* CreateAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAlbumViewController.swift; sourceTree = "<group>"; };
 		89C4EFBE1A7AA2F600CEF7F0 /* not_show.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = not_show.jpg; sourceTree = "<group>"; };
 		89F08BEE1A15912000DB4305 /* Travely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travely.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,14 +227,8 @@
 		891558241A73AC6D005E237A /* coredata */ = {
 			isa = PBXGroup;
 			children = (
-				894BF6EC1A69281500F2EE47 /* UserPath.swift */,
-				891558131A73A7EF005E237A /* TRDefaultMapDataManager.swift */,
-				8915581B1A73A8B9005E237A /* SmallArea.swift */,
-				891558191A73A8B9005E237A /* Region.swift */,
-				891558171A73A8B9005E237A /* LargeArea.swift */,
-				891558151A73A8B8005E237A /* Prefecture.swift */,
-				891558311A73E573005E237A /* TRDefaultCoreDataManager.swift */,
-				891558331A73EFB6005E237A /* TRTravelDataManager.swift */,
+				892AE9541A7AC4E700E847A5 /* entity */,
+				892AE9531A7AC4D300E847A5 /* manager */,
 			);
 			name = coredata;
 			sourceTree = "<group>";
@@ -224,6 +244,30 @@
 			name = utils;
 			sourceTree = "<group>";
 		};
+		892AE9531A7AC4D300E847A5 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				891558131A73A7EF005E237A /* TRDefaultMapDataManager.swift */,
+				891558331A73EFB6005E237A /* TRTravelDataManager.swift */,
+				891558311A73E573005E237A /* TRDefaultCoreDataManager.swift */,
+			);
+			name = manager;
+			sourceTree = "<group>";
+		};
+		892AE9541A7AC4E700E847A5 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				894BF6EC1A69281500F2EE47 /* UserPath.swift */,
+				8915581B1A73A8B9005E237A /* SmallArea.swift */,
+				891558191A73A8B9005E237A /* Region.swift */,
+				891558171A73A8B9005E237A /* LargeArea.swift */,
+				891558151A73A8B8005E237A /* Prefecture.swift */,
+				89A966211A7AC128003F18F0 /* Travel.swift */,
+				892AE9511A7AC43F00E847A5 /* TravelPoint.swift */,
+			);
+			name = entity;
+			sourceTree = "<group>";
+		};
 		894AAE4E1A75F20100937E62 /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +279,16 @@
 		896347FD1A15D0F000683D4C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				89C46FA41A7B2C1B003789B1 /* IMG_4091.JPG */,
+				89C46FA51A7B2C1B003789B1 /* IMG_4093.JPG */,
+				89C46FA61A7B2C1B003789B1 /* IMG_4094.JPG */,
+				89C46FA71A7B2C1B003789B1 /* IMG_4095.JPG */,
+				89C46FA81A7B2C1B003789B1 /* IMG_4097.JPG */,
+				89C46FA91A7B2C1B003789B1 /* IMG_4098.JPG */,
+				89C46FAA1A7B2C1B003789B1 /* IMG_4099.jpg */,
+				89C46FAB1A7B2C1B003789B1 /* IMG_4101.JPG */,
+				89C46FAC1A7B2C1B003789B1 /* IMG_4102.JPG */,
+				89C46FAD1A7B2C1B003789B1 /* IMG_4103.JPG */,
 				89C4EFBE1A7AA2F600CEF7F0 /* not_show.jpg */,
 				892B1ADD1A1EE9FE00E5DEDF /* travely_icon@2x.png */,
 			);
@@ -292,6 +346,7 @@
 				890758271A1AF19A00E94E93 /* TRExtensions.swift */,
 				8972D0101A1B5C3E0041F931 /* TRRouter.swift */,
 				89C4EFBC1A7AA29900CEF7F0 /* CreateAlbumViewController.swift */,
+				89C2A1171A7B45F5005D0D7A /* ShareMapViewController.swift */,
 				89F08BFA1A15912000DB4305 /* Main.storyboard */,
 				89B8BD891A7A7E4600C512D9 /* CreateTravelView.xib */,
 				89F08BFD1A15912000DB4305 /* Images.xcassets */,
@@ -433,22 +488,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C46FB41A7B2C1B003789B1 /* IMG_4099.jpg in Resources */,
 				891558041A73A1FC005E237A /* areaName10.json in Resources */,
+				89C46FB61A7B2C1B003789B1 /* IMG_4102.JPG in Resources */,
+				89C46FB11A7B2C1B003789B1 /* IMG_4095.JPG in Resources */,
 				892B1ADE1A1EE9FE00E5DEDF /* travely_icon@2x.png in Resources */,
 				89F08BFC1A15912000DB4305 /* Main.storyboard in Resources */,
 				89B8BD8A1A7A7E4600C512D9 /* CreateTravelView.xib in Resources */,
 				891558031A73A1FC005E237A /* areaName05.json in Resources */,
 				8915580B1A73A1FC005E237A /* areaName45.json in Resources */,
 				89C4EFBF1A7AA2F600CEF7F0 /* not_show.jpg in Resources */,
+				89C46FAF1A7B2C1B003789B1 /* IMG_4093.JPG in Resources */,
+				89C46FB71A7B2C1B003789B1 /* IMG_4103.JPG in Resources */,
 				891558071A73A1FC005E237A /* areaName25.json in Resources */,
 				891558021A73A1FC005E237A /* areaName01.json in Resources */,
 				89F08C011A15912000DB4305 /* LaunchScreen.xib in Resources */,
+				89C46FB01A7B2C1B003789B1 /* IMG_4094.JPG in Resources */,
+				89C46FB21A7B2C1B003789B1 /* IMG_4097.JPG in Resources */,
 				89F08BFE1A15912000DB4305 /* Images.xcassets in Resources */,
+				89C46FAE1A7B2C1B003789B1 /* IMG_4091.JPG in Resources */,
 				8915580A1A73A1FC005E237A /* areaName40.json in Resources */,
 				891558061A73A1FC005E237A /* areaName20.json in Resources */,
 				8915580D1A73A1FC005E237A /* areaName55.json in Resources */,
 				8915580C1A73A1FC005E237A /* areaName50.json in Resources */,
+				89C46FB31A7B2C1B003789B1 /* IMG_4098.JPG in Resources */,
 				891558091A73A1FC005E237A /* areaName35.json in Resources */,
+				89C46FB51A7B2C1B003789B1 /* IMG_4101.JPG in Resources */,
 				891558051A73A1FC005E237A /* areaName15.json in Resources */,
 				891558081A73A1FC005E237A /* areaName30.json in Resources */,
 			);
@@ -518,10 +583,12 @@
 				8915582D1A73CD85005E237A /* TRJsonUtils.swift in Sources */,
 				894BF6EF1A692B1B00F2EE47 /* TRDrawUtils.swift in Sources */,
 				894BF6ED1A69281500F2EE47 /* UserPath.swift in Sources */,
+				892AE9521A7AC43F00E847A5 /* TravelPoint.swift in Sources */,
 				891558141A73A7EF005E237A /* TRDefaultMapDataManager.swift in Sources */,
 				8991F2BB1A773209004EBB77 /* TRTreeViewDataModel.swift in Sources */,
 				891558341A73EFB6005E237A /* TRTravelDataManager.swift in Sources */,
 				896BE3511A1CA9A300B7DEB9 /* MenuViewController.swift in Sources */,
+				89A966221A7AC128003F18F0 /* Travel.swift in Sources */,
 				89F08BF71A15912000DB4305 /* Travely.xcdatamodeld in Sources */,
 				891558291A73B3ED005E237A /* DefaultMapData.xcdatamodeld in Sources */,
 				8972D0111A1B5C3E0041F931 /* TRRouter.swift in Sources */,
@@ -530,6 +597,7 @@
 				8915581C1A73A8B9005E237A /* SmallArea.swift in Sources */,
 				8915581A1A73A8B9005E237A /* Region.swift in Sources */,
 				89B8BD8C1A7A7E5700C512D9 /* SelectTermView.swift in Sources */,
+				89C2A1181A7B45F5005D0D7A /* ShareMapViewController.swift in Sources */,
 				894BF6F31A69376900F2EE47 /* TRLog.swift in Sources */,
 				896BE31D1A1C8AE800B7DEB9 /* CreateTravelViewController.swift in Sources */,
 			);

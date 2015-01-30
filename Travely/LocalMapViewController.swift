@@ -121,15 +121,15 @@ class LocalMapViewController: UIViewController, CLLocationManagerDelegate, MKMap
             return
         }
         
-        var coordinaters = self.locationItems.map {
-            (let item: UserLocateMotion) -> CLLocationCoordinate2D in
-            
+        var coordinaters = self.locationItems.map { item -> CLLocationCoordinate2D in
+            self.travelDataManager.insertUserPath(item, activityColorHex: TRDrawUtils.getActivityColor(item.activity))
             let coordinate = item.location.coordinate
             let annotationString = item.location.timestamp.toString("HH:mm")
             let minute = annotationString.toNSString().substringFromIndex(3).toIntAsUnwrapOpt()
             
             if minute % 5 == 0 {
                 if annotationString != self.lastAnnotation {
+                    self.travelDataManager.insertTravelPoint(coordinate.longitude, latitude: coordinate.latitude, name: "", imageUrl: nil, timestamp: annotationString, comment: nil)
                     let point = MKPointAnnotation()
                     point.coordinate = coordinate
                     point.title = annotationString
@@ -143,7 +143,7 @@ class LocalMapViewController: UIViewController, CLLocationManagerDelegate, MKMap
         
         let polyline = ColorPolyline(coordinates: &coordinaters, count: self.locationItems.count)
         let lastItem = self.locationItems.last! as UserLocateMotion
-        polyline.drawColor = TRDrawUtils.getActivityColor(lastItem.activity)
+        polyline.drawColor = TRDrawUtils.getActivityColorWithHex(TRDrawUtils.getActivityColor(lastItem.activity))
         self.localMapView.addOverlay(polyline, level: .AboveRoads)
         
         let lastItemIndex = self.locationItems.count - 1

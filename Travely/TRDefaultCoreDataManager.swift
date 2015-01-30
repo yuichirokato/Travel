@@ -111,8 +111,9 @@ class TRDefaultCoreDataManager: NSObject {
     private func createPersistentStoreCoordinater(storeName: String) -> NSPersistentStoreCoordinator {
         let storeUrl = self.applicationDocumentDirectory().URLByAppendingPathComponent("\(storeName).sqlite")
         var error:NSError?
-        
+
         let persistentStoreCoordinater = NSPersistentStoreCoordinator(managedObjectModel: createManagedObjectModel(storeName))
+        
         let checkPersistent = persistentStoreCoordinater.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeUrl, options: nil, error: &error)
         
         switch checkPersistent {
